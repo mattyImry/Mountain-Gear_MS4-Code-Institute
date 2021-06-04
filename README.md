@@ -1,3 +1,24 @@
+Full Stack Frameworks with Django Milestone Project 4 - Code Institute
+
+{PIC OF IAM RESPONSIVE}
+
+# **_Mountain Gear_**
+
+This project is my fourth Milestone Project for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer Diploma. This project is designed to demostrate my capabilities to create a Full Stack web application with the use of [Python3](https://www.python.org/download/releases/3.0/) and 
+[Django](https://www.djangoproject.com/). The project is an e-commerce application which will be using a dataset WHICH TYPE OF DATABASE? to store product information. Also in the dataset will be stored user informations to allow users to login, logout and store delivery informations.
+
+
+## **_UX_**  
+### **_Strategy / Site Owner story_**
+
+I have designed this website to allow the User to be able to check and to buy climbing equipment. The main user will be climbers and mountain lovers. The User can come to the website and be able to purchase goods without the need of registering. If the User register an account within the website the user will be able to store delivery information to quickly checkout for the next purchases.
+
+#### **_Data schema_**
+
+#### **_Security_**
+
+### **_Scope_**
+
 ### **_Features to be implemented_**
 
 * Login functionality with one click with Google, Facebook, Twitter accounts.
