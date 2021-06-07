@@ -36,7 +36,7 @@
     </head>
     <body>
         <header class="container-fluid fixed-top">
-            <div class="row">
+            <div class="row" id="topnav">
                 <div class="col text-center">
                     <a href="{% url 'home' %}" class="nav-link logo-link">
                         <h2 class="logo-text">Mountain<i class="fas fa-cogs"></i>Gear</h2>
@@ -65,7 +65,7 @@
                                     <p class="my-0">Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu " aria-labelledby="user-option">
+                            <div class="dropdown-menu" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="" class="dropdown-item">Products Menu</a>
@@ -88,12 +88,9 @@
                                         {% else %}
                                             £0.00
                                         {% endif %}
-
                                     </p>
                                 </div>
                             </a>
-                               
-
                         </li>
                     </ul>
                 </div>
