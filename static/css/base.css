@@ -5,20 +5,66 @@ html {
 body  {
     background: url('/media/main-page.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh-164px);
+    height: calc(100vh - 214px);
     font-family: 'Oxygen', sans-serif;
 }
 
-/* from Bulma
+/* Landing Page */
+
+.mobile-header,
+.header-home{
+    background-color: #545659 !important;
+}
+
+
+a {
+    color: #fafafa;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color:#92a396;
+}
+
+.header-container {
+    padding-top: 164px;
+}
+
+.page-footer {
+    background-color: #545659;
+    min-height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.contact {
+    padding-top: 15px;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+/* from Bulma*/
 .icon {
     align-items: center;
     display: inline-flex;
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-}*/
+    color: #fafafa;
+
+}
+
+
+/* Buttons*/
 
 .enter-button {
     background: #545659;
     color: white;
 }
+
