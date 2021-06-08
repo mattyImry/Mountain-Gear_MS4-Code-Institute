@@ -5,7 +5,20 @@ html {
 body  {
     background: url('/media/main-page.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc;
-    font-family: 'Oxygen';
+    height: calc(100vh-164px);
+    font-family: 'Oxygen', sans-serif;
 }
 
+/* from Bulma
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}*/
+
+.enter-button {
+    background: #545659;
+    color: white;
+}

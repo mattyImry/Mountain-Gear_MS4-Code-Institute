@@ -46,3 +46,8 @@ is a style sheet language. It is used to style markup language such as HTML.
 ## **_Credits_**
 
 This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). And the code is taken by following the Boutique Ado project from Code Institite.
+
+
+
+color main #545659
+color 2nd  #92a396
