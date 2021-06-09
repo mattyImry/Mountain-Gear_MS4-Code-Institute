@@ -39,6 +39,10 @@ a:hover {
     padding-top: 164px;
 }
 
+.dropdown-menu {
+    background-color : #fafafa;
+}
+
 .search-box {
     padding-top: 10px;
 }
