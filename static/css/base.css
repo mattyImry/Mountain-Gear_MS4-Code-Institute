@@ -22,7 +22,7 @@ body  {
 }
 
 .slogan {
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 a {
@@ -39,12 +39,20 @@ a:hover {
     padding-top: 164px;
 }
 
+#delivery-banner {
+    padding: 5px 0;
+}
+
 .dropdown-menu {
     background-color : #fafafa;
 }
 
 .search-box {
     padding-top: 10px;
+}
+
+.icon-search {
+    color: black !important;
 }
 
 .page-footer {
@@ -82,5 +90,9 @@ a:hover {
 .enter-button {
     background: #545659;
     color: white;
+}
+
+.btn-search {
+    background: #9c9c9c;
 }
 
