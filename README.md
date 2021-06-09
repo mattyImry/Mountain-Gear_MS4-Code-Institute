@@ -51,3 +51,4 @@ This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). And the
 
 color main #545659
 color 2nd  #92a396
+color 2nd  #9c9c9c

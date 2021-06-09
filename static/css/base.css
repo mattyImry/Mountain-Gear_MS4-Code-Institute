@@ -11,11 +11,19 @@ body  {
 
 /* Landing Page */
 
-.mobile-header,
+
 .header-home{
     background-color: #545659 !important;
+    padding-top: 15px;
 }
 
+.mobile-header {
+    background-color: #9c9c9c;
+}
+
+.slogan {
+    margin-top: 60px;
+}
 
 a {
     color: #fafafa;
@@ -29,6 +37,10 @@ a:hover {
 
 .header-container {
     padding-top: 164px;
+}
+
+.search-box {
+    padding-top: 10px;
 }
 
 .page-footer {
