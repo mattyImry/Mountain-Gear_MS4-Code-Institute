@@ -64,7 +64,7 @@ Features that I want to implement are:
 
 ### **_Skeleton_**
 
-* The website will be easy to navigate by having displayed the differet pages and sub menus via the navigation bar.
+* The website will be easy to navigate by having displayed the different pages and sub menus via the navigation bar.
 * The User will be able to search the products by using the search bar present throughout the website.
 * When browsing the products, the products will be shown in a card like style with pictures and minimum information.
 * When clicking on the product's card the product with full information will be shown.
