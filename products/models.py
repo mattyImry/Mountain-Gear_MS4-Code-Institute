@@ -4,7 +4,17 @@ from django.db import models
 
 
 class Category(models.Model):
-    """Model for categories taken from Boutique Ado CI tutorial"""
+    """
+    Model for categories
+    taken from Boutique Ado CI tutorial
+    """
+
+    class Meta:
+        """
+        fix typo in admin panel
+        """
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -16,7 +26,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    """Model for products taken from Boutique Ado CI tutorial"""
+    """
+    Model for products taken
+    from Boutique Ado CI tutorial
+    """
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
