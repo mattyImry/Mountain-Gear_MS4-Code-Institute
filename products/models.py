@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Category(models.Model):
+
     """
     Model for categories
     taken from Boutique Ado CI tutorial
@@ -26,6 +27,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+
     """
     Model for products taken
     from Boutique Ado CI tutorial
