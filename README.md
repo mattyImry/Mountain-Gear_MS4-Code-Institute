@@ -11,11 +11,11 @@ This project is my fourth Milestone Project for the [Code Institute](https://cod
 ## **_UX_**  
 ### **_Strategy / Site Owner story_**
 
-I have designed this website to allow the User to be able to check and to buy climbing equipment. The main user will be climbers and mountain lovers. The User can come to the website and be able to purchase goods without the need of registering. If the User register an account within the website the user will be able to store delivery information to quickly checkout for the next purchases. For Admin and maintenance purposes an admin account will be created.
+I have designed this website to allow the User to be able to check and buy climbing equipment. The main users will be climbers and mountain lovers. The User can come to the website and be able to purchase goods without the need of registering. If the User register an account within the website the user will be able to store delivery information to quickly checkout for the next purchases and be able to check an order history. For Admin and maintenance purposes an admin account will be created.
 
 #### **_Data schema_**
 
-The database for this project is Sql. Sql works with tables instead of documents like in MongoDb databases. For the products of the website I have created 2 tables. One containing the categories of products and the second table with the products. The products have all the related fields that descibe the product. Every product in the products table has a Primary Key and also a Category id which refer to the Primary key of each category in the catergories table.
+The database for this project is Sql. Sql works with tables instead of documents like in MongoDb databases. For the products of the website I have created 2 tables. One containing the categories of products and the second table containing the products. The products have all the related fields that descibe the product. Every product in the products table has a Primary Key and also a Category id which refer to the Primary key of each category in the catergories table.
 There is also a table for the Users, reviews and wishlist.
 
 #### **_Security_**
@@ -25,12 +25,13 @@ ADD SECURITY FEATURES OF Django
 
 Features that I want to implement are:
 
-* Ability for the User and developer to browse climbing products in different categories.
-* Ability for the not registered User  to browse climbing products in different categories.
+* Ability for the User to browse climbing products in different categories.
+* Ability for the not registered User to browse climbing products in different categories.
 * Ability for the not registered User to buy climbing products.
 * Ability for the User to register an account. 
 * Ability for the registered User to receive confirmation emails for registration and order confirmation.
 * Ability for the registered User to retrive lost password for login.
+* Ability for the registered User to browse climbing products in different categories.
 * Ability for the registered User to buy climbing products.
 * Ability for the registered User to save items in the wishlist.
 * Ability for the registered User to delete items from the wishlist.
@@ -39,10 +40,11 @@ Features that I want to implement are:
 * Ability for the registered User to login / logout from the website.
 * Ability for any User to search products.
 * Ability for any User to modify the cart by removing unwanted products.
-* Ability for the Admin to add, edit and update products and CATEGORY??
+* Ability for the Admin to add, edit and update products and category.
+* Ability for any User to contact the Admin/Developer via the Contact Us page.
 * Easy design and navigation.
 * Mobile first design.
-* Ability to contact the Admin/Developer via the Contact Us page.
+
 
 ### **_Structure_**
 
@@ -52,18 +54,43 @@ Features that I want to implement are:
 * The Camping category is composed by 2 type of products: Tents and Sleeping bags.
 * The Climbing shoes category is composed by 2 type of products: Mens and Womens.
 * A search function will allow Users to search products.  
-* The Categories are accessible from the main page under the search box if clicked the sub menu will open showing the types of products.  
+* The Categories are accessible from the main page under the search box if clicked a sub menu will open showing the types of products.  
 * The Users will be able to access registration, login/logout functionality from the navigation menu.  
 * The Users will be able to access the cart from the navigation bar.
-* The registered User to view the order history via the navigation bar under the Account menu
+* The User will be able to access delivery information, purchase history.
+* The registered User to view the order history via the navigation bar under the Account menu.
+* Any user will be able to access a contact us page via the footer.
 
 
 ### **_Skeleton_**
 
+* The website will be easy to navigate by having displayed the differet pages and sub menus via the navigation bar.
+* The User will be able to search the products by using the search bar present throughout the website.
+* When browsing the products, the products will be shown in a card like style with pictures and minimum information.
+* When clicking on the product's card the product with full information will be shown.
+* To register, login and to add delivery informations, forms will be implemented with validations features.
+* On the footer a link for directing the Users to the contact page will always be present.
+* The contact page will hold a form to contact the developer.
+* The logo and "Home" link in the Navigation bar will redirect the Users to the main page and will always be present.
+* The shopping cart will display the products added in a card style format.
+* The checkout page will show the list of product and the form to add delievery and payment information with validation functionality.
+
+### **_Surface_**
+
+The website uses [Bootstrap](https://getbootstrap.com/) as a framework. Mobile first approch will be use. For the dign and look of the website I have taken ideas and styles from Boutique Ado Code Institute tutorial and [Gooutdoors](https://www.gooutdoors.co.uk/) e-commerce.
+The color use is mainly grey.
+* The color #545659 is used for the main navigation and footer.
+* The product bar uses color #9c9c9c.
+* When in mobile view main navigation the color #9c9c9c is used. I have decided to change color due to the size of the screen and by having a lighter grey the page is easier to read then using dark grey color #545659.
+* The buttons also use color #545659.
+* The text inside banners uses 2 colors. Black with in banners with color #9c9c9c and color #fafafa with banner color #545659 to help with contrast.
+* The fonts choosen are from [Google Fonts](https://fonts.google.com/) 'Oxygen' and as a back up 'sans-serif'.
+* The icons used throughout the web site are from [Fontawesome](https://fontawesome.com/).
 
 
- 
+## **_Wireframes_**
 
+Link to Wireframes folder:
 
 ### **_Features to be implemented_**
 
