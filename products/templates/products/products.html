@@ -23,10 +23,10 @@
         <div class="row row-products ">
             <div class="container-products col-12">
                 <div class="row"></div>
-                <div class="row">
+                <div class="row row-products">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-card">
-                            <div class="card h-100">
+                            <div class="shadow rounded card h-100">
                                 {% if product.image %}
                                 <a href="">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -36,10 +36,10 @@
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="font-weight-bold">Category: {{ product.category }}</p>
+                                <div class="card-body pb-0 ">
+                                    <p>Category: {{ product.category }}</p>
                                 </div>
-                                <div class="card-body pb-0">
+                                <div class="card-body pb-0 pt-0">
                                     <p >{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white border-0 text-left pt-0">
