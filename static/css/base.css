@@ -7,6 +7,7 @@ body  {
     background-size: cover;
     height: calc(100vh - 214px);
     font-family: 'Oxygen', sans-serif;
+
 }
 
 /* Landing Page */
@@ -74,6 +75,7 @@ a:hover {
 }
 
 /* from Bulma*/
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -84,8 +86,40 @@ a:hover {
 
 }
 
+/* Products page */
 
-/* Buttons*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: -1;
+}
+
+.banner-products {
+    margin-top: 65px;
+}
+
+.price-tag {
+
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+hr {
+    height: 1px;
+    background-color: #545659;  
+}
+
+.col-card {
+    margin-bottom: 15px;
+}
+
+
+/* Buttons */
 
 .enter-button {
     background: #545659;
