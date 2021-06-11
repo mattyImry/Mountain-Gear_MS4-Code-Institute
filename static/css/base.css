@@ -122,7 +122,17 @@ hr {
     margin-bottom: 50px;
 }
 
+/* Products detail page */
 
+.col-detail {
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.image-col {
+    max-height: 400px;
+    max-width: 400px;
+}
 /* Buttons */
 
 .enter-button {
@@ -133,4 +143,8 @@ hr {
 .btn-search {
     background: #9c9c9c;
 }
+
+
+
+/* media query*/
 
