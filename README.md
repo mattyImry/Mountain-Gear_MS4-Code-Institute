@@ -90,7 +90,14 @@ The color use is mainly grey.
 
 ## **_Wireframes_**
 
-Link to Wireframes folder:
+Link to Wireframes folder: [Wireframes]()
+
+## **_User Story_**
+
+## **_Features_**
+
+### **_Existing Features_**
+
 
 ### **_Features to be implemented_**
 
@@ -117,7 +124,8 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 ## **_Credits_**
 
-This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). And the code is taken by following the Boutique Ado project from Code Institite.
+* This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institite.
+
 
 
 
