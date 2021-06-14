@@ -26,7 +26,7 @@ body  {
     margin-top: 50px;
 }
 
-a {
+.logo-link {
     color: #fafafa;
     text-decoration: none;
     background-color: transparent;
@@ -122,6 +122,11 @@ hr {
     margin-bottom: 50px;
 }
 
+.text-link-cat {
+    color: #545659;
+   text-decoration: underline;
+}
+
 /* Products detail page */
 
 .col-detail {
@@ -133,6 +138,7 @@ hr {
     max-height: 400px;
     max-width: 400px;
 }
+
 
 /* Buttons */
 

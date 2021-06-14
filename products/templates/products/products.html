@@ -20,25 +20,54 @@
                 <p>Mountaineering is a sport and a way of life, but it is essential to stay safe. Our stock range will assist you to give you the safest and best experience with high quality products </p>
             </div>
         </div>
+        <div class="row row-sort">
+                    <!-- Code taken from Boutique Ado-->
+                  <div class="col-12 col-md-6 mb-4">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select  rounded {% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>  
+                    <div class="col-12 col-md-6 d-none d-md-block ">
+                        <p class="text-muted text-right mb-0 ">
+                            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                            {% endif %}
+                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
         <div class="row row-products ">
             <div class="container-products col-12">
-                <div class="row"></div>
                 <div class="row row-products">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-card">
                             <div class="shadow rounded card h-100">
                                 {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
                                 {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
                                 {% endif %}
-                                <div class="card-body pb-0 ">
-                                    <p>Category: {{ product.category }}</p>
-                                </div>
+
+                                {% if product.category %}
+                                    <div class="card-body pb-0 ">
+                                        <a class="text-link-cat" href="{% url 'products'%}?category={{ product.category.name }}"> {{ product.category.friendly_name }}</a>
+                                    </div>
+                                {% endif %}
+
                                 <div class="card-body pb-0 pt-0">
                                     <p >{{ product.name }}</p>
                                 </div>
@@ -47,9 +76,9 @@
                                         <div class="col">
                                             <p class=" text-left price-tag mb-0">£{{ product.price }}</p>
                                             {% if product.rating %}
-                                            <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
-                                            <small>No Rating</small>
+                                                <small>No Rating</small>
                                             {% endif %}
                                         </div>
                                     </div>
