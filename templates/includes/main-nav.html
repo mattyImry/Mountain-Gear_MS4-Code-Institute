@@ -8,12 +8,17 @@
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="equipment-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
+            </a>    
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="equipment-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="equipment-link">
-                <a href="" class="dropdown-item">Ropes</a>
-                <a href="" class="dropdown-item ">Helemts</a>
-                <a href="" class="dropdown-item ">Harnesses</a>
+                <a href="{% url 'products' %}?category=ropes" class="dropdown-item">Ropes</a>
+                <a href="{% url 'products' %}?category=helmets" class="dropdown-item ">Helmets</a>
+                <a href="{% url 'products' %}?category=harnesses" class="dropdown-item ">Harnesses</a>
                 
             </div>
         </li>
@@ -23,8 +28,8 @@
                 Clothing
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Shoes</a>
-                <a href="" class="dropdown-item">Trousers</a>
+                <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
+                <a href="{% url 'products' %}?category=trousers" class="dropdown-item">Trousers</a>
                 
             </div>
         </li>
@@ -34,8 +39,8 @@
                 Camping
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="camping-link">
-                <a href="" class="dropdown-item">Tent</a>
-                <a href="" class="dropdown-item">Sleeping bags</a>
+                <a href="{% url 'products' %}?category=tent" class="dropdown-item">Tent</a>
+                <a href="{% url 'products' %}?category=sleeping_bags" class="dropdown-item">Sleeping bags</a>
                 
             </div>
         </li>
@@ -45,8 +50,8 @@
                 Climbing Shoes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="climbing-shoes-link">
-                <a href="" class="dropdown-item">Mens</a>
-                <a href="" class="dropdown-item">Womens</a>
+                <a href="{% url 'products' %}?category=climbing_shoes_mens" class="dropdown-item">Mens</a>
+                <a href="{% url 'products' %}?category=climbing_shoes_womens" class="dropdown-item">Womens</a>
                 
             </div>
         </li>
