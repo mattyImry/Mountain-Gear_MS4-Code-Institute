@@ -125,7 +125,7 @@ is a style sheet language. It is used to style markup language such as HTML.
 ## **_Credits_**
 
 * This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institite.
-
+* HTML symbols taken from https://www.toptal.com/.
 
 
 

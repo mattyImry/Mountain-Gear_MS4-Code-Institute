@@ -85,12 +85,12 @@
                             </div>      
                         </li>
                         <li class="list-inline-item">
-                            <a href="{% url 'view_cart' %}" class="{% if total %}text-info font-weight-bold{% else %}{% endif %} nav-link logo-link">
+                            <a href="{% url 'view_cart' %}" class="{% if total %}font-weight-bold{% else %}{% endif %} nav-link logo-link">
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-cart"></i></div>
                                     <p>
-                                        {% if total %}
-                                            £{{ total|floatformat:2 }}
+                                        {% if sum_total %}
+                                            £{{ sum_total|floatformat:2 }}
                                         {% else %}
                                             £0.00
                                         {% endif %}
