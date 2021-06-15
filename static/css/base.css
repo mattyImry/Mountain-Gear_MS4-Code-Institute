@@ -139,6 +139,15 @@ hr {
     max-width: 400px;
 }
 
+.row-form {
+    margin-bottom: 50px;
+}
+
+.col-quantity,
+.col-btns {
+    padding-left: 0;
+}
+
 
 /* Cart page */
 
