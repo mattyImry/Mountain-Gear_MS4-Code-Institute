@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container container-cart">
+        <div class="row row-cart">
+            <div class="col col-cart">
+                <h2>Shopping Cart</h2>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if cart_items %}
+                    <div class="col"></div>
+                {% else %}
+                    <p>Cart is empty</p>
+                    <a href="{% url 'products' %}" class="btn btn-lg enter-button btn btn-lg rounded-0 text-uppercase">Keep shopping</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

@@ -140,6 +140,13 @@ hr {
 }
 
 
+/* Cart page */
+
+.container-cart {
+    margin-top: 70px;
+}
+
+
 /* Buttons */
 
 .enter-button {
@@ -156,7 +163,9 @@ hr {
 /* media query*/
 
 @media only screen and (min-width: 382px) and (max-width: 991px) {
-    .col-detail {
+    .col-detail ,
+    .container-cart {
+    
         margin-top: 0;
     }
 }
