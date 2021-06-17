@@ -94,6 +94,28 @@ Link to Wireframes folder: [Wireframes]()
 
 ## **_User Story_**
 
+1. As an unregister / register User I want to be able to view climbing products.
+2. As an unregister / register User I want to be able to buy a product.
+3. As an unregister / register User I want to be able to register to the website.
+4. As an unregister / register User I want to be able to contact the website via contact us page. 
+5. As a register User I want to be able to login to the website.
+6. As a register User I want to be able to recover my password.
+7. As a register User I want to be able to logout to the website.
+8. As a register User I want to be able to view my profile.
+9. As a register User I want to be able to receive email confirmation after registration.
+10. As a register User I want to be able to view total purchase in every page.
+11. As a register User I want to be able to view purchase history.
+12. As a register User I want to be able to save my delivery information.
+13. As a register User I want to be able to receive email confirmation after check out.
+14. As a unregister / register I want to be able to search products.
+15. As a unregister / register  I want to be able to view a specific category of products.
+16. As a unregister / register I want to be able to view products added to shopping cart.
+17. As a unregister / register I want to be able to view confirmation / error messages during my activity within the website.
+18. As admin I want to be able to add a product.
+19. As admin I want to be able to edit a product.
+20. As admin I want to be able to update a product.
+21. As admin I want to be able to delete a product.
+
 ## **_Features_**
 
 ### **_Existing Features_**

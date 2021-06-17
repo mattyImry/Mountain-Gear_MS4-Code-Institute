@@ -13,8 +13,8 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container "> 
-        <div class="row row-product-detail ">
-            <div class=" col col-detail">
+        <div class="row row-product-detail justify-content-center ">
+            <div class=" col col-detail  ">
                 <div class="image-col ">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="blank">
@@ -58,7 +58,7 @@
                                 <div class="col-12 col-btns">
                                     <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">
                                         
-                                        <span class="text-uppercase">&#10096;  Keep shopping</span>
+                                        <span class="text-uppercase"> &#10096;  Keep shopping</span>
                                     </a>
                                     <input type="submit" class="btn gear-button rounded text-uppercase"
                                         value="&#43;  Add to Cart">
