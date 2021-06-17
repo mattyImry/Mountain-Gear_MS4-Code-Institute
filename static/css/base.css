@@ -103,10 +103,8 @@ a:hover {
 }
 
 .price-tag {
-
     font-size: 20px;
     font-weight: bolder;
-
 }
 
 hr {
@@ -134,7 +132,7 @@ hr {
     margin-bottom: 40px;
 }
 
-.image-col {
+.image-prod {
     max-height: 400px;
     max-width: 400px;
 }
@@ -143,9 +141,12 @@ hr {
     margin-bottom: 50px;
 }
 
-.col-quantity,
-.col-btns {
+.col-quantity {
     padding-left: 0;
+}
+
+.col-btns {
+    margin-top: 100px;
 }
 
 
@@ -172,9 +173,23 @@ hr {
 /* media query*/
 
 @media only screen and (min-width: 382px) and (max-width: 991px) {
-    .col-detail ,
     .container-cart {
-    
         margin-top: 0;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .col-description {
+        margin-bottom: 50px;
+    }
+
+    .col-detail {
+        margin-bottom: 0;
+        
+    }
+
+    .col-btns {
+        margin-top: 0;
+    }
+}
+

@@ -13,9 +13,9 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container "> 
-        <div class="row row-product-detail justify-content-center ">
-            <div class=" col col-detail  ">
-                <div class="image-col ">
+        <div class="row row-product-detail">
+            <div class=" col-12 col-md-6 col-detail">
+                <div class="image-prod ">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -26,49 +26,52 @@
                         </a>
                     {% endif %}
                 </div>
-                <div class="col">
-                    <div class="product-details-col mt-3">
-                        {% if product.category %}
-                            <div class="card-body pl-0 pb-0 ">
-                                <a class="text-link-cat" href="{% url 'products'%}?category={{ product.category.name }}"> {{ product.category.friendly_name }}</a>
-                            </div>
-                        {% endif %}
-                        <p class="mb-0">{{ product.name }}</p>
-                        <p class="text-left font-weight-bold">${{ product.price }}</p>
-                        {% if product.rating %}
-                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                        {% else %}
-                            <small class="text-muted">No Rating</small>
-                        {% endif %}
-                        <p >{{ product.description }}</p>
-                        <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
-                            {% csrf_token %}
-                            <div class="row-form">
-                                <div class="col col-quantity">
-                                    <p class=""><strong>Quantity:</strong></p>
-                                    <div class="form-group w-25">
-                                        <div class="input-group">
-                                            <input class="form-control qty_input" type="number" name="quantity"
-                                                value="1" min="1" max="99" data-item_id="{{ product.id }}"
-                                                id="id_qty_{{ product.id }}">
-                                        </div>
-                                    </div>
+            </div>
+            <div class="col-12 col-md-6 col-btns">
+                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row-form">
+                        <div class="col col-quantity">
+                            <p class=""><strong>Quantity:</strong></p>
+                            <div class="form-group w-25">
+                                <div class="input-group">
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99"
+                                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                 </div>
-
-                                <div class="col-12 col-btns">
-                                    <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">
-                                        
-                                        <span class="text-uppercase"> &#10096;  Keep shopping</span>
-                                    </a>
-                                    <input type="submit" class="btn gear-button rounded text-uppercase"
-                                        value="&#43;  Add to Cart">
-                                </div>
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
-                        </form>
+                        </div>
+                        <div >
+                            <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">
+            
+                                <span class="text-uppercase"> &#10096; Keep shopping</span>
+                            </a>
+                            <input type="submit" class="btn gear-button rounded text-uppercase" value="&#43;  Add to Cart">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col col-description">
+                <div class="mt-3">
+                    {% if product.category %}
+                    <div class="card-body pl-0 pb-0 ">
+                        <a class="text-link-cat" href="{% url 'products'%}?category={{ product.category.name }}">
+                            {{ product.category.friendly_name }}</a>
+                    </div>
+                    {% endif %}
+                    <p class="mb-0">{{ product.name }}</p>
+                    <p class="text-left font-weight-bold">${{ product.price }}</p>
+                    {% if product.rating %}
+                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                    <small class="text-muted">No Rating</small>
+                    {% endif %}
+                    <p>{{ product.description }}</p>
+        
+                    </form>
                 </div>
             </div>
-            
         </div>
+    </div>
 {% endblock %}
