@@ -23,7 +23,7 @@
                 {% if cart_items %}
                     {% for item in cart_items %}
                         <div class="row">
-                            <div class="col cart-img">
+                            <div class="col cart-img mb-4">
                                 <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                             </div>
                             <div class="col cart-name">
@@ -31,22 +31,22 @@
                                 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                             </div>
                             <div class="col cart-price">
-                                <p class="my-0">£{{ item.product.price }}</p>
+                                <p class="my-0"><strong>£</strong> {{ item.product.price }}</p>
                             </div>
                             <div class="col cart-qty">
-                                <p class="my-0">{{ item.quantity }}</p>
+                                <p class="my-0"><strong>Qty:</strong> {{ item.quantity }}</p>
                             </div>
-                            <div class="col cart-sub">
-                                <p class="my-0">£{{ item.product.price }}</p>
+                            <div class="col cart-sub d-none d-sm-none">
+                                <p class="my-0"><strong>£</strong> {{ item.product.price }}</p>
                             </div>
                         </div>
                     {% endfor %}
-                        <div class="row">
-                            <div class="col cart-btns">
-                                <a href="{% url 'products' %}" class="btn btn-lg gear-button rounded text-uppercase">&#10096;  Keep shopping</a>
-                                <a href="" class="btn btn-lg gear-button rounded text-uppercase">Checkout</a>
+                        <div class="row row-end-cart mt-4">
+                            <div class="col-12 col-md-8 cart-btns">
+                                <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">&#10096;  Keep shopping</a>
+                                <a href="" class="btn gear-button rounded text-uppercase">Checkout</a>
                             </div>
-                            <div class="col cart-tot">
+                            <div class="col-6 col-md-4 cart-tot mt-4">
                                 <h6><strong>Items Total: £{{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Total: £{{ sum_total|floatformat:2 }}</strong></h4>

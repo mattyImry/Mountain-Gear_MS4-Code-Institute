@@ -150,12 +150,16 @@ hr {
 }
 
 
+
 /* Cart page */
 
 .container-cart {
     margin-top: 70px;
 }
 
+.cart-tot {
+    left: 100px;
+}
 
 /* Buttons */
 
@@ -191,5 +195,13 @@ hr {
     .col-btns {
         margin-top: 0;
     }
+
+    .cart-tot {
+        left: 0;
+    }
+
+    
 }
+
+
 
