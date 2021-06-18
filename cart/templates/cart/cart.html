@@ -21,71 +21,45 @@
         <div class="row">
             <div class="col">
                 {% if cart_items %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
-                                </tr>
-                            </thead>
-
-                            {% for item in cart_items %}
-                                <tr>
-                                    <td class=" w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    {% for item in cart_items %}
+                        <div class="row">
+                            <div class="col cart-img">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            </div>
+                            <div class="col cart-name">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            </div>
+                            <div class="col cart-price">
+                                <p class="my-0">£{{ item.product.price }}</p>
+                            </div>
+                            <div class="col cart-qty">
+                                <p class="my-0">{{ item.quantity }}</p>
+                            </div>
+                            <div class="col cart-sub">
+                                <p class="my-0">£{{ item.product.price }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                        <div class="row">
+                            <div class="col cart-btns">
+                                <a href="{% url 'products' %}" class="btn btn-lg gear-button rounded text-uppercase">&#10096;  Keep shopping</a>
+                                <a href="" class="btn btn-lg gear-button rounded text-uppercase">Checkout</a>
+                            </div>
+                            <div class="col cart-tot">
+                                <h6><strong>Items Total: £{{ total|floatformat:2 }}</strong></h6>
+                                <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                                <h4 class="mt-4"><strong>Total: £{{ sum_total|floatformat:2 }}</strong></h4>
+                                {% if free_delivery_delta > 0 %}
+                                    <p class="mb-1 text-danger">
+                                        Free delivery if you spend <strong>${{ free_delivery_delta }}</strong> more!
+                                    </p>
+                                {% endif %}
+                            </div>
+                        </div>  
                 {% else %}
                     <p>Cart is empty</p>
-                    <a href="{% url 'products' %}" class="btn btn-lg gear-button rounded text-uppercase">&#10096;  Keep shopping</a>
+                    
                 {% endif %}
             </div>
         </div>
