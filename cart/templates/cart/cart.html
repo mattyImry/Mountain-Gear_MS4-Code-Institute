@@ -36,7 +36,7 @@
                             <div class="col cart-qty">
                                 <p class="my-0"><strong>Qty:</strong> {{ item.quantity }}</p>
                                 <p class="my-0"><strong>Size:</strong> {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                                <p class="my-0"><strong>Number:</strong> {% if item.product.has_numbers %}{{ item.numbers|upper }}{% else %}N/A{% endif %}</p>
+                                <p class="my-0"><strong>Number:</strong> {% if item.product.has_numbers %}{{ item.number }}{% else %}N/A{% endif %}</p>
                             </div>
                             <div class="col cart-sub">
                                 <p class="my-0"><strong>£</strong> {{ item.product.price }}</p>
