@@ -39,6 +39,38 @@
                                         data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                 </div>
                             </div>
+                            <!-- Code taken from Boutique Ado-->
+                            {% if product.has_sizes%}
+                                {% with product.has_sizes as s %}
+                                    {% if s %}
+                                    <div class="col w-25 p-0 mb-4">
+                                        <p><strong>Size:</strong></p>
+                                        <select class="form-control" name="product_size" id='id_product_size'>
+                                            <option value="xs">XS</option>
+                                            <option value="s">S</option>
+                                            <option value="m" selected>M</option>
+                                            <option value="l">L</option>
+                                            <option value="xl">XL</option>
+                                        </select>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endif %}
+                            {% if product.has_numbers %}
+                                {% with product.has_numbers as n %}
+                                    {% if n %}
+                                    <div class="col w-25 p-0 mb-4">
+                                        <p><strong>Number:</strong></p>
+                                        <select class="form-control" name="product_number" id='id_product_number'>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8" selected>8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    {% endif %}
+                                {% endwith %}
+                            {% endif %}
+                            </div>
                         </div>
                         <div >
                             <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">
