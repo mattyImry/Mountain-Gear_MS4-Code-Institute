@@ -153,6 +153,11 @@ hr {
     margin: 0 30px 50px ;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 
 /* Cart page */
 

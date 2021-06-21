@@ -34,9 +34,43 @@
                                 <p class="my-0"><strong>£</strong> {{ item.product.price }}</p>
                             </div>
                             <div class="col cart-qty">
-                                <p class="my-0"><strong>Qty:</strong> {{ item.quantity }}</p>
-                                <p class="my-0"><strong>Size:</strong> {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                                <p class="my-0"><strong>Number:</strong> {% if item.product.has_numbers %}{{ item.number }}{% else %}N/A{% endif %}</p>
+                                <form action="" method="POST" class="form update-form">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm gear-button rounded"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="decrement-qty_{{ item.item_id }}">
+                                                    <i class="fa-sm fas fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <input class="form-control form-control-sm qty_input" type="number"
+                                                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm gear-button rounded"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="increment-qty_{{ item.item_id }}">
+                                                    <i class="fa-sm fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            {% if item.product.has_sizes %}
+                                            <input type="hidden" name="product_size" value="{{ item.size}}">
+                                            {% endif %}
+                                            {% if item.product.product_number %}
+                                            <input type="hidden" name="product_number" value="{{ item.number}}">
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <a class="update-link text-info"><small>Update</small></a>
+                                    <a class="remove-item text-info float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size}}" data-number="{{ item.number }}"><small>Update</small></a>
+                                </form>
+
+                                <p class="my-0"><strong>Size:</strong>
+                                    {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                                <p class="my-0"><strong>Number:</strong>
+                                    {% if item.product.has_numbers %}{{ item.number }}{% else %}N/A{% endif %}</p>
                             </div>
                             <div class="col cart-sub">
                                 <p class="my-0"><strong>£</strong> {{ item.product.price }}</p>
@@ -53,8 +87,8 @@
                                 <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Total: £{{ sum_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
-                                    <p class="mb-1 text-danger">
-                                        Free delivery if you spend <strong>${{ free_delivery_delta }}</strong> more!
+                                    <p class="mb-1 ">
+                                        Free delivery if you spend <strong>£{{ free_delivery_delta }}</strong> more!
                                     </p>
                                 {% endif %}
                             </div>
@@ -65,4 +99,32 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<!--Code taken from Boutique Ado-->
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('size');
+        var number = $(this).data('number');
+        var url = `/cart/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size, 'number': number};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}
