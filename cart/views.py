@@ -13,7 +13,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """
     Add quantity of item to cart
-    Code taken from Boutique Ado CI tutorial
+    Part of Code taken from Boutique Ado CI tutorial
     """
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')

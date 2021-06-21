@@ -6,14 +6,13 @@ from products.models import Product
 
 def cart_contents(request):
     """
-    Code taken from Boutique Ado CI tutorial
+    Part of the Code taken from Boutique Ado CI tutorial
     this code will make available the cart to all apps
     """
     cart_items = []
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
-    print(cart)
 
     for item_id, item_data in cart.items():
 

@@ -33,17 +33,33 @@
                     <div class="row-form">
                         <div class="col col-quantity">
                             <p class=""><strong>Quantity:</strong></p>
-                            <div class="form-group w-25">
+                            <div class="form-group w-50">
                                 <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn gear-button rounded"
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
                                     <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99"
-                                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn gear-button rounded"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Code taken from Boutique Ado-->
                             {% if product.has_sizes%}
                                 {% with product.has_sizes as s %}
                                     {% if s %}
-                                    <div class="col w-25 p-0 mb-4">
+                                    <div class="col w-50 p-0 mb-4">
                                         <p><strong>Size:</strong></p>
                                         <select class="form-control" name="product_size" id='id_product_size'>
                                             <option value="xs">XS</option>
@@ -58,7 +74,7 @@
                             {% if product.has_numbers %}
                                 {% with product.has_numbers as n %}
                                     {% if n %}
-                                    <div class="col w-25 p-0 mb-4">
+                                    <div class="col w-50 p-0 mb-4">
                                         <p><strong>Number:</strong></p>
                                         <select class="form-control" name="product_number" id='id_product_number'>
                                             <option value="6">6</option>
@@ -106,4 +122,10 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
 {% endblock %}
