@@ -169,6 +169,21 @@ hr {
     left: 100px;
 }
 
+.message-container {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 99999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* Buttons */
 
 .gear-button {
