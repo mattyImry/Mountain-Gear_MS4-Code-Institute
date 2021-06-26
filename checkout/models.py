@@ -10,7 +10,7 @@ from products.models import Product
 class Order(models.Model):
     """
     Model for Order
-    taken from Boutique Ado CI tutorial
+    Code taken from Boutique Ado CI tutorial
     """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -34,7 +34,7 @@ class Order(models.Model):
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
-        taken from Boutique Ado CI tutorial
+        Code taken from Boutique Ado CI tutorial
         """
         return uuid.uuid4().hex.upper()
 
@@ -42,7 +42,7 @@ class Order(models.Model):
         """
         Update grand total each time a line item is added,
         accounting for delivery costs.
-        taken from Boutique Ado CI tutorial
+        Code taken from Boutique Ado CI tutorial
         """
         self.order_total = self.lineitems.aggregate(Sum
                                                     ('lineitem_total')
@@ -58,7 +58,7 @@ class Order(models.Model):
         """
         Override the original save method to set the order number
         if it hasn't been set already.
-        taken from Boutique Ado CI tutorial
+        Code taken from Boutique Ado CI tutorial
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -71,7 +71,7 @@ class Order(models.Model):
 class OrderLineItem(models.Model):
     """
     Model for Order line item
-    taken from Boutique Ado CI tutorial
+    Code taken from Boutique Ado CI tutorial
     """
     order = models.ForeignKey(Order,
                               null=False, blank=False,
@@ -94,6 +94,7 @@ class OrderLineItem(models.Model):
         """
         Override the original save method to set the lineitem total
         and update the order total.
+        Code taken from boutique Ado CI tutorial
         """
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
