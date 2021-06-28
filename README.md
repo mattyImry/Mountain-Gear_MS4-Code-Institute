@@ -131,9 +131,19 @@ If the admin is logged the account submenu will show 3 links: Profile, Logout an
 * Any User can browse different climbing products.
 * Any User can buy different climbing products.
 * Any User can checkout securely.
-* Any User can see confirmations / error messages when compliting actions on the website.
+* Any User can see confirmations / error messages when completing actions on the website.
+* Any User can receive confirmation emails for order when compliting order form during checkout.
 * The register user can save delivery information safely.
-* 
+* The admin can modify , edit and remove products / categries via admin page.
+* The products and user information will be strored in a Sql type database.
+
+### **_Features to be implemented_**
+
+* Ability to log in via social media.
+* Add side advertisement in product page.
+* Add special offers in product page.
+* Add ability to pay via paypal and other payment methods.
+
 
 ### **_Features to be implemented_**
 
