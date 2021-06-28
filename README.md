@@ -145,11 +145,6 @@ If the admin is logged the account submenu will show 3 links: Profile, Logout an
 * Add ability to pay via paypal and other payment methods.
 
 
-### **_Features to be implemented_**
-
-* Login functionality with one click with Google, Facebook, Twitter accounts.
-* Add card to show disocunts and sales of certain products.
-
 ## **_Technology Used_** 
 
 * [HTML](https://en.wikipedia.org/wiki/HTML) has been used in this project because is the standard markup language for documents designed to be displayed in a web browser.
@@ -166,6 +161,9 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 ## **_Bugs and fixes_*
 
+* Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my view.cart where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with a consistent "if statements".
+
+* When updating products via cart the message confirmation is not displaying accordingly.
 
 
 ## **_Credits_**
