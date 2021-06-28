@@ -57,10 +57,11 @@
                                                 </button>
                                             </div>
                                             {% if item.product.has_sizes %}
-                                            <input type="hidden" name="product_size" value="{{ item.size}}">
+                                                <input type="hidden" name="product_size" value="{{ item.size }}">
                                             {% endif %}
-                                            {% if item.product.product_number %}
-                                            <input type="hidden" name="product_number" value="{{ item.number}}">
+                                            
+                                            {% if item.product.has_numbers %}
+                                                <input type="hidden" name="product_number" value="{{ item.number }}">
                                             {% endif %}
                                         </div>
                                     </div>

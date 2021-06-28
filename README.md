@@ -161,10 +161,9 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 ## **_Bugs and fixes_*
 
-* Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my view.cart where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with a consistent "if statements".
+* Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my cart.view where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with consistent "if statements".
 
-* When updating products via cart the message confirmation is not displaying accordingly.
-
+* When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.
 
 ## **_Credits_**
 
