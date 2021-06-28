@@ -253,12 +253,28 @@ hr {
     background: #9c9c9c;
 }
 
+
+/* Checkout page */
+
+.checkout-btns {
+    margin-bottom: 90px;
+}
+
+.col-checkout {
+    margin-top: 80px;
+}
+
+
 /* media query*/
 
 @media only screen and (min-width: 382px) and (max-width: 991px) {
     .container-cart {
         margin-top: 0;
     }
+
+    .col-checkout {
+    margin-top: 0;
+}
 }
 
 @media only screen and (max-width: 768px) {

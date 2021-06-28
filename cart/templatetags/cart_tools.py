@@ -1,7 +1,7 @@
 from django import template
 
 """
-Code taken from 
+Code taken from
 Boutique Ado CI tutorial
 """
 register = template.Library()
