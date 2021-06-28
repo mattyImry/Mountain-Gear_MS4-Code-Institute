@@ -16,6 +16,7 @@ I have designed this website to allow the User to be able to check and buy climb
 #### **_Data schema_**
 
 The database for this project is Sql. Sql works with tables instead of documents like in MongoDb databases. For the products of the website I have created 2 tables. One containing the categories of products and the second table containing the products. The products have all the related fields that descibe the product. Every product in the products table has a Primary Key and also a Category id which refer to the Primary key of each category in the catergories table.
+ADD SCREEN SHOT OF PRODUCT AND CAT ADMIN.
 There is also a table for the Users, reviews and wishlist.
 
 #### **_Security_**
@@ -120,6 +121,19 @@ Link to Wireframes folder: [Wireframes]()
 
 ### **_Existing Features_**
 
+* The navbar contains a logo on top right hand corner to redirect to the landing page. There is a search box to search products, the cart total always visible and the account menu. If the user is not logged the account menu will open a window with 2 links: Register and login. If the user is logged the account submenu will show 2 links: Profile and Logout.
+If the admin is logged the account submenu will show 3 links: Profile, Logout and Products menu.  
+* The footer will show the contact us page where any user can contact the website admin/owner.
+* The website is visible in all screen sizes.
+* The unregistered User can register an account via the "Register" page.
+* The register User can log in via the log in link in the navbar.
+* The User can log out via the log out link in the navbar.
+* Any User can browse different climbing products.
+* Any User can buy different climbing products.
+* Any User can checkout securely.
+* Any User can see confirmations / error messages when compliting actions on the website.
+* The register user can save delivery information safely.
+* 
 
 ### **_Features to be implemented_**
 
