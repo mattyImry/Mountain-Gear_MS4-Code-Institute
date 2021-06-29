@@ -128,7 +128,7 @@ def adjust_cart(request, item_id):
                              f'Update number {number} {product.name}'
                              f' quantity to '
                              f' {cart[item_id]["items_by_number"][number]}')
-    
+
         else:
             del cart[item_id]['items_by_number'][number]
             if not cart[item_id]['items_by_number']:
@@ -146,10 +146,10 @@ def adjust_cart(request, item_id):
         else:
             cart.pop(item_id)
             messages.success(request, f'Removed {product.name} to the cart!')
-    
+
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
-    
+
 
 def remove_from_cart(request, item_id):
     """

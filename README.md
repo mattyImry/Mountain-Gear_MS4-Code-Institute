@@ -154,7 +154,7 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 * [Gitpod](https://gitpod.io) has been used as an on-line IDE followed by [Heroku](https://www.heroku.com/) for deployment. IDE is a software application used by computer programmers for software development.
 * [Github](https://github.com/) has been used to store the code.
-
+* Stripe
 
 ## **_Testing_**
 

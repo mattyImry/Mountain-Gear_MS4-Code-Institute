@@ -169,7 +169,11 @@ hr {
     left: 100px;
 }
 
-/* Toasts */
+.border {
+    color: #545659 ;
+}
+
+/* Toasts  Code taken from Boutique ado*/
 .message-container {
     position: fixed;
     top: 80px;
@@ -197,39 +201,7 @@ hr {
     right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap. Code taken from Boutique ado */
-
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
+/* Code taken from Boutique ado */
 
 .bag-notification-wrapper {
     height: 100px;
@@ -238,8 +210,7 @@ hr {
 }
 
 .message-delta {
-    background-color: #92a396 ;
-    
+    background-color: #92a396 ; 
 }
 
 /* Buttons */
@@ -261,10 +232,37 @@ hr {
 }
 
 .col-checkout {
-    margin-top: 80px;
+    margin-top: 70px;
 }
 
+/* From boutique ado*/
 
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #92a396;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #92a396;
+}
 /* media query*/
 
 @media only screen and (min-width: 382px) and (max-width: 991px) {
