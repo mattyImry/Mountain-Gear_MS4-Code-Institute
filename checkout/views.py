@@ -5,7 +5,7 @@ from django.conf import settings
 from .forms import OrderForm
 from cart.contexts import cart_contents
 
-import stripe 
+import stripe
 
 
 def checkout(request):
