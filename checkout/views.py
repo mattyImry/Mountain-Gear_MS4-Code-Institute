@@ -33,9 +33,9 @@ def checkout(request):
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
+
         if order_form.is_valid():
             order = order_form.save()
-
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -48,10 +48,8 @@ def checkout(request):
                         order_line_item.save()
 
                     else:
-                        product = Product.objects.get(id=item_id)
                         if 'items_by_size' in item_data:
-                            for size, quantity \
-                                    in item_data['items_by_size'].items():
+                            for size, quantity in item_data['items_by_size'].items():
                                 order_line_item = OrderLineItem(
                                     order=order,
                                     product=product,
@@ -60,14 +58,12 @@ def checkout(request):
                                 )
                                 order_line_item.save()
                         else:
-                            product = Product.objects.get(id=item_id)
-                            for number, quantity \
-                                    in item_data['items_by_number'].items():
+                            for number, quantity in item_data['items_by_number'].items():
                                 order_line_item = OrderLineItem(
                                     order=order,
                                     product=product,
                                     quantity=quantity,
-                                    product_numer=number,
+                                    product_number=number,
                                 )
                                 order_line_item.save()
 
