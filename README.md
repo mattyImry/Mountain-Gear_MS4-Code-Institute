@@ -165,6 +165,10 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 * When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.
 
+* On the Stripe payment where the card details need to be entered, the postcode area let input a number indefinetly without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeded and also the order is saved in the admin panel. 
+
+* When viewing some products in the products_details page, some description are not rendering the same as the others. I have tried to remove or add more description but the result does not change.
+
 ## **_Credits_**
 
 * This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institite.
