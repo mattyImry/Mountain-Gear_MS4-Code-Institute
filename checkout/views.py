@@ -97,14 +97,14 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
             )
-
+       
         order_form = OrderForm()
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'stripe_public_key',
-        'client_secret': 'intent.client_secret',
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
@@ -120,7 +120,7 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
-
+    print(order)
     if 'cart' in request.session:
         del request.session['cart']
 
@@ -128,5 +128,5 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-
+    
     return render(request, template, context)
