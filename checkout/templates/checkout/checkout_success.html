@@ -22,16 +22,19 @@
         </div>
 
         <!--Code taken from Boutique Ado CI Tutorial -->
-        <!--Order details -->
+        <!--Order -->
         <div class="row">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
+
+                       
                         <div class="col">
                             <small class="text-muted">Order Info:</small>
                         </div>
                     </div>
 
+                    <!--Order number -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Number</p>
@@ -41,6 +44,7 @@
                         </div>
                     </div>
 
+                    <!--Order date -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Date</p>
@@ -50,6 +54,7 @@
                         </div>
                     </div>
 
+                    <!--Order details -->
                     <div class="row">
                         <div class="col">
                             <small class="text-muted">Order Details:</small>
@@ -59,19 +64,23 @@
                     {% for item in order.lineitems.all %}
                     <div class="row">
                         <div class="col-12 col-md-4">
+
+                            <!-- Product -->
                             <p class="small mb-0 text-black font-weight-bold">
                                 {{ item.product.name }}
                                 {% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
                                 {% if item.product_number %} - Number {{ item.product.number }}{% endif %}
                             </p>
                         </div>
-                    
+                        
+                        <!-- Product price -->
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="small mb-0">{{ item.quantity }} @ £{{ item.product.price }} each</p>
                         </div>
                     </div>
                     {% endfor %}
 
+                    <!-- Delivery details -->
                     <div class="row">
                         <div class="col">
                             <small class="text-muted">Delivering To:</small>
@@ -79,6 +88,7 @@
                     </div>
 
                     <div class="row">
+                        <!-- Name -->
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Full Name</p>
                         </div>
@@ -87,6 +97,7 @@
                         </div>
                     </div>
 
+                    <!-- Addresses -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Address 1</p>
@@ -107,6 +118,7 @@
                     </div>
                     {% endif %}
 
+                    <!-- County -->
                     {% if order.county %}
                     <div class="row">
                         <div class="col-12 col-md-4">
@@ -117,7 +129,8 @@
                         </div>
                     </div>
                     {% endif %}
-
+                    
+                    <!-- City -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Town or City</p>
@@ -138,6 +151,7 @@
                     </div>
                     {% endif %}
 
+                    <!-- Country -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Country</p>
@@ -147,6 +161,7 @@
                         </div>
                     </div>
 
+                    <!-- Phone number -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Phone Number</p>
@@ -162,6 +177,7 @@
                         </div>
                     </div>
 
+                    <!-- Prices -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Total</p>
