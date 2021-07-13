@@ -83,7 +83,6 @@ a:hover {
     height: 1.5rem;
     width: 1.5rem;
     color: #fafafa;
-
 }
 
 /* Products page */
@@ -235,6 +234,12 @@ hr {
     margin-top: 70px;
 }
 
+/* Checkout success page */
+
+.container-success{
+    margin-top: 70px;
+}
+
 /* From boutique ado*/
 
 .StripeElement,
@@ -263,6 +268,7 @@ hr {
 .stripe-style-input::placeholder {
     color: #92a396;
 }
+
 /* media query*/
 
 @media only screen and (min-width: 382px) and (max-width: 991px) {
@@ -272,13 +278,12 @@ hr {
 
     .col-checkout {
     margin-top: 0;
-}
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .col-detail {
         margin-bottom: 0;
-        
     }
 
     .col-btns {
