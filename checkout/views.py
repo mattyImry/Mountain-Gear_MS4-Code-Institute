@@ -49,7 +49,9 @@ def checkout(request):
 
                     else:
                         if 'items_by_size' in item_data:
-                            for size, quantity in item_data['items_by_size'].items():
+                            for size,\
+                                    quantity in\
+                                    item_data['items_by_size'].items():
                                 order_line_item = OrderLineItem(
                                     order=order,
                                     product=product,
@@ -58,7 +60,9 @@ def checkout(request):
                                 )
                                 order_line_item.save()
                         else:
-                            for number, quantity in item_data['items_by_number'].items():
+                            for number,\
+                                        quantity in\
+                                        item_data['items_by_number'].items():
                                 order_line_item = OrderLineItem(
                                     order=order,
                                     product=product,
@@ -97,7 +101,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
             )
-       
+
         order_form = OrderForm()
 
     template = 'checkout/checkout.html'
@@ -128,5 +132,5 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-    
+
     return render(request, template, context)
