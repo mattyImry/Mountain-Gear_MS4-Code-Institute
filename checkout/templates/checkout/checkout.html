@@ -30,7 +30,7 @@
                 <p class="font-weight-bold">Order Summary ({{ product_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 font-weight-bold">Item</p>
+                        <p class="mb-1 mt-0 font-weight-bold">Item :</p>
                     </div>
                     <div class="col-3 text-right">
                         <p class="mb-1 mt-0 font-weight-bold ">Subtotal</p>
@@ -52,11 +52,11 @@
                     <!--Display product name size and number-->
                     <div class="col-7">
                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                        <p class="my-0">Size:
+                        <p class="my-0 "><strong>Size:</strong>
                             {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                        <p class="my-0">Number:
+                        <p class="my-0"><strong>Number:</strong>
                             {% if item.product.has_numbers %}{{ item.number }}{% else %}N/A{% endif %}</p>
-                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        <p class="my-0"><strong>Qty:</strong> {{ item.quantity }}</p>
                     </div>
                     <div class="col-3 text-right ">
                         <p class="my-0 small">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -145,6 +145,14 @@
             </div>
         </div>
     </div>
+    <div id="loading-overlay">
+        <h1 class="text-light loading-spinner">
+            <span class="icon">
+                <i class="fas fa-2x fa-spinner fa-spin"></i>
+            </span>
+        </h1>
+    </div>
+
 {% endblock %}
 
 <!--Code taken from Boutique Ado-->
