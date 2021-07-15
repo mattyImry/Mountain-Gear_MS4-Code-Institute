@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-
+from .models import Order, OrderLineItem
+from products.models import Product
 
 class StripeWH_Handler:
     """
@@ -28,7 +29,7 @@ class StripeWH_Handler:
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
-        sum_total = round(intent.data.charges[0].amount / 100, 2)
+        sum_total = round(intent.charges.data[0].amount / 100, 2)
 
         """
         Clean data in shipping details

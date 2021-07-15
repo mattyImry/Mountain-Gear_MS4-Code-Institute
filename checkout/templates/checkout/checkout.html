@@ -122,6 +122,9 @@
 
                         <!--  form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        
+                        <!--Create payment intent by using client_secret in the view-->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
                     <!--Buttons to submit order or return to cart -->
