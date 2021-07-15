@@ -234,7 +234,7 @@ hr {
     margin-top: 70px;
 }
 
-#loading-overlay{
+#loading-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -245,12 +245,25 @@ hr {
     z-index: 999;
 }
 
-.loading-spinner{
+.loading-spinner {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+/*Code taken from boutique ado*/
+
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color:#9c9c9c !important;
+
 }
 
 /* Checkout success page */
