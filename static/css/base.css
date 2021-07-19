@@ -268,11 +268,15 @@ select option[value=""] {
 
 /* Checkout success page */
 
-.container-success{
+.container-success {
     margin-top: 70px;
 }
 
+/* Allauth templates*/
 
+.allauth-col {
+    margin-bottom: 100px;
+}
 /* From boutique ado*/
 
 .StripeElement,
