@@ -74,6 +74,9 @@ a:hover {
     color: #000 !important;
 }
 
+input[name='q']::placeholder {
+    color: #92a396;
+}
 /* from Bulma*/
 
 .icon {
@@ -277,6 +280,15 @@ select option[value=""] {
 .allauth-col {
     margin-bottom: 100px;
 }
+
+.allauth-form-inner-content input {
+    border: 1px solid #92a396;
+    border-radius: 5px;
+}
+.allauth-form-inner-content input::placeholder {
+    color: #92a396;
+}
+
 /* From boutique ado*/
 
 .StripeElement,
