@@ -275,6 +275,16 @@ select option[value=""] {
     margin-top: 70px;
 }
 
+/* Profile page */
+
+.col-profile {
+    margin-bottom: 100px;
+}
+
+#profile-update-form input::placeholder {
+    color: #92a396;
+}
+
 /* Allauth templates*/
 
 .allauth-col {
@@ -289,7 +299,7 @@ select option[value=""] {
     color: #92a396;
 }
 
-/* From boutique ado*/
+/* From boutique ado Stripe*/
 
 .StripeElement,
 .stripe-style-input {
