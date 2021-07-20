@@ -281,6 +281,15 @@ select option[value=""] {
     margin-bottom: 100px;
 }
 
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+#id_default_country option:first-child {
+    color: #92a396;
+}
+
 #profile-update-form input::placeholder {
     color: #92a396;
 }
