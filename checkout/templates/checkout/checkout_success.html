@@ -212,9 +212,15 @@
         </div>
 
         <div class="row row-success mt-3 ml-1">
-            <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">
-                <span class="text-uppercase"> <i class="fas fa-chevron-left"></i>  Keep shopping</span>
-            </a>
+            {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn gear-button rounded text-uppercase">
+                    <span class="text-uppercase"> <i class="fas fa-user"></i>  Back to profile</span>
+                </a>
+            {% else %}
+                <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">
+                    <span class="text-uppercase"> <i class="fas fa-chevron-left"></i>  Keep shopping</span>
+                </a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

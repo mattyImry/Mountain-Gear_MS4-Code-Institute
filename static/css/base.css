@@ -281,6 +281,11 @@ select option[value=""] {
     margin-bottom: 100px;
 }
 
+.order-history {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
 #id_default_country,
 #id_default_country option:not(:first-child) {
     color: #000;
