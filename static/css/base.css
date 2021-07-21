@@ -272,7 +272,11 @@ select option[value=""] {
 /* Checkout success page */
 
 .container-success {
-    margin-top: 70px;
+    margin-top: 70px;  
+}
+
+.col-success {
+    margin-bottom: 70px;
 }
 
 /* Profile page */
