@@ -156,22 +156,28 @@ is a style sheet language. It is used to style markup language such as HTML.
 * [Github](https://github.com/) has been used to store the code.
 * Stripe
 
-## **_Testing_**
+## **_Testing_**  
 
+For the testing section please refer to TESTING.md file.
 
 ## **_Bugs and fixes_*
 
-* Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my cart.view where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with consistent "if statements".
+* Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my cart.view.py where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with consistent "if statements".
 
 * When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.
 
-* On the Stripe payment where the card details need to be entered, the postcode area let input a number indefinetly without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeded and also the order is saved in the admin panel. After fixing the issue with gitpod this problem has disappeared. Now the postcode area input accepts only 5 numbers.
+* At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinetly without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeded and also the order is saved in the admin panel. After fixing the issue with gitpod this problem has disappeared. Now the postcode area input accepts only 5 numbers.
 
-* When viewing some products in the products_details page, some description are not rendering the same as the others. I have tried to remove or add more description but the result does not change.
+* When viewing some products in the products_details page, some of the product description are not rendering the same as the others. I have tried to remove or add more description but the result does not change.
+
+
+## **_Deployment_**
+### **_Local deployment_**
+### **_Heroku deployment_**
 
 ## **_Credits_**
 
-* This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institite.
+* This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institute.
 * HTML symbols taken from https://www.toptal.com/designers/htmlarrows/symbols/.
 
 

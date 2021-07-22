@@ -316,6 +316,12 @@ select option[value=""] {
 .allauth-form-inner-content input::placeholder {
     color: #92a396;
 }
+/* sign up page*/
+
+.text-benefits { 
+    line-height: 1.8;
+}
+
 
 /* From boutique ado Stripe*/
 
