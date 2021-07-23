@@ -61,8 +61,8 @@
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
-                                                    {% if item.product.has_sizes %}Size {{ item.size|upper }}{% endif %}
-                                                    {% if item.product.has_numbers %}{{ item.number }}{% endif %}
+                                                    {% if item.product_size %}Size {{ item.product_size|upper }}{% endif %}
+                                                    {% if item.product_number %}Number {{ item.product_number }}{% endif %}
                                                     {{ item.product.name }} x{{ item.quantity }}
                                                     
                                                 </li>

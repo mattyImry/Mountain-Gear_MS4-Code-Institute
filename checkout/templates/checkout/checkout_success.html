@@ -68,9 +68,9 @@
                             <!-- Product checking if product has size or number-->
                             <p class="small mb-0 text-black font-weight-bold">
                                 {{ item.product.name }}
-                                {% if item.product.has_sizes %} - Size {{ item.size|upper }}{% endif %}
-                                {% if item.product.has_numbers %} - Number {{ item.number }}{% endif %}
-                                
+                               
+                                {% if item.product_size %}Size {{ item.product_size|upper }}{% endif %}
+                                {% if item.product_number %}Number {{ item.product_number }}{% endif %}
                                 
                             </p>
                         </div>
