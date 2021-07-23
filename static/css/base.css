@@ -12,7 +12,6 @@ body  {
 
 /* Landing Page */
 
-
 .header-home{
     background-color: #545659 !important;
     padding-top: 15px;
@@ -233,7 +232,8 @@ hr {
     margin-bottom: 90px;
 }
 
-.col-checkout {
+.col-checkout,
+.col-manager {
     margin-top: 70px;
 }
 
@@ -320,6 +320,12 @@ select option[value=""] {
 
 .text-benefits { 
     line-height: 1.8;
+}
+
+/* add product page */
+
+.form-manager {
+    margin-bottom: 70px;
 }
 
 /* From boutique ado Stripe*/
