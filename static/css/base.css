@@ -414,5 +414,36 @@ select option[value=""] {
     .cart-sub {
         display: none;
     }
+
+    .nav-link {
+        padding: 0.1rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .5rem .5rem;
+    }
+
+    .banner-products,
+    .col-manager,
+    .col-detail,
+    .container-success,
+    .container-cart,
+    .col-checkout,
+    .col-success {
+        margin-top: 0px;
+    }
+
+    .btn {
+        margin-bottom: 4px;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .3rem .5rem !important;
+    }
 }
+
 

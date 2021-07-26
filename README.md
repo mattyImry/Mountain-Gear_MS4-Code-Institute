@@ -177,8 +177,9 @@ For the testing section please refer to TESTING.md file.
 
 ## **_Credits_**
 
-* This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institute.
-* HTML symbols taken from https://www.toptal.com/designers/htmlarrows/symbols/.
+* This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institute. On top of codes and functions you can see the reference for the code.
+* To adjust the font size ,for mobile view, of the icons in the navbar-mobile, the toggle-button and the increse/decrese buttons in product detail page, the code come from Boutique Ado.
+
 
 
 
