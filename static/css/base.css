@@ -361,6 +361,24 @@ select option[value=""] {
     color: #92a396;
 }
 
+/* edit/add product form admin 
+ Code form Boutique Ado */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
 /* media query*/
 
 @media only screen and (min-width: 382px) and (max-width: 991px) {

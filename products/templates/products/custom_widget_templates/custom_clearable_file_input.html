@@ -12,6 +12,7 @@
     {{ widget.input_text }}
 {% endif %}
 <span class="btn gear-button rounded text-uppercase btn-file">
+    <i class="fas fa-check-square"></i>
     Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
 <strong><p id="filename"></p></strong>
