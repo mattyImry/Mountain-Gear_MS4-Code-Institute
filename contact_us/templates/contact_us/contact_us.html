@@ -18,13 +18,13 @@
                 <p class="text-center font-weight-bold"> Thank you for reach in our site. Please fill the form below to contact us.</p>
             </div>  
         </div>
-        <form method="POST">
+        <form method="POST" action="{% url 'contact_us' %}" class="form">
             {% csrf_token %}
             {{ form|crispy }}
             <div class="form-group">
                 <button class="btn gear-button rounded text-uppercase" type="submit">
                     Send
-                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i> 
+                    <i class="fas fa-paper-plane"></i>
                 </button>
             </div>
         </form>
