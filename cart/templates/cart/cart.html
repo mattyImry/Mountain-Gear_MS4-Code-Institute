@@ -76,7 +76,7 @@
                                 <a class="remove-item text-info float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size}}" data-product_number="{{ item.number }}"><small>Remove</small></a>
                                 <p class="my-0"><strong>Size:</strong>
                                     {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                                <p class="my-0"><strong>Number:</strong>
+                                <p class="my-0 mb-3"><strong>Number:</strong>
                                     {% if item.product.has_numbers %}{{ item.number }}{% else %}N/A{% endif %}</p>
                             </div>
                             <div class="col cart-sub mb-2">
@@ -94,7 +94,7 @@
                                 </span></a>
                                 
                             </div>
-                            <div class="col-6 col-md-4 cart-tot mt-4">
+                            <div class="col-6 col-md-4 cart-tot mt-4 ">
                                 <h6><strong>Items Total: £{{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Total: £{{ sum_total|floatformat:2 }}</strong></h4>
