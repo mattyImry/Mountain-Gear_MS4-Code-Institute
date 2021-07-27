@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
+    'contact_us',
 
     # Django apps
     'crispy_forms'
