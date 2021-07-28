@@ -335,6 +335,12 @@ select option[value=""] {
     margin-bottom: 70px;
 }
 
+/* Contact page */
+
+.col-contact {
+    margin-bottom: 100px;
+}
+
 /* From boutique ado Stripe*/
 
 .StripeElement,

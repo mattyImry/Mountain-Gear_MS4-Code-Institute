@@ -18,15 +18,19 @@
                 <p class="text-center font-weight-bold"> Thank you for reach in our site. Please fill the form below to contact us.</p>
             </div>  
         </div>
-        <form method="POST" action="{% url 'contact_us' %}" class="form">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <div class="form-group">
-                <button class="btn gear-button rounded text-uppercase" type="submit">
-                    Send
-                    <i class="fas fa-paper-plane"></i>
-                </button>
+        <div class="row">
+            <div class="col col-contact">
+                <form method="POST" action="{% url 'contact_us' %}" class="form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="form-group">
+                        <button class="btn gear-button rounded text-uppercase" type="submit">
+                            Send
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
     {% endblock %}
