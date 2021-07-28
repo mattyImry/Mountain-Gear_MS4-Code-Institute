@@ -20,6 +20,8 @@
         </div>
         <div class="row">
             <div class="col col-contact">
+                
+                <!--Form to submit message-->
                 <form method="POST" action="{% url 'contact_us' %}" class="form">
                     {% csrf_token %}
                     {{ form|crispy }}

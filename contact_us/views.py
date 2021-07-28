@@ -5,7 +5,7 @@ from .forms import ContactForm
 
 def contact_us(request):
     """
-    View to create contact form for contact_us.html
+    View to submit contact form for contact_us.html
     """
     if request.method == 'POST':
         form = ContactForm(request.POST)
