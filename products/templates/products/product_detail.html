@@ -32,7 +32,7 @@
                     {% csrf_token %}
                     <div class="row-form">
                         <div class="col col-quantity">
-                            <p class=""><strong>Quantity:</strong></p>
+                            <p><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -124,6 +124,15 @@
                         <p class="p-description">{{ product.description }}</p>     
                         </form>
                     </div>
+                </div>
+            </div>
+            <div class="row row-review ">
+                <div class="col col-review ml-5 mr-5 ">
+                    <p><strong>Reviews:</strong></p>
+                    {% for review in product.reviews.all %}
+                    <p><strong >by: {{ review.profile.user.username }}</strong></p>
+                        <p>{{ review.review }}</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>

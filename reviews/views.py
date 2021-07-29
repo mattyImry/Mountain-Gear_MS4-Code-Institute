@@ -1,10 +1,14 @@
-from django.shortcuts import redirect, reverse, render
+from django.shortcuts import redirect, reverse
 from django.contrib import messages
 
 from .forms import ReviewForm
 
 
 def add_review(request, product_id):
+    """
+    view to add review to product
+    Code from Slack please refer to read me for credit
+    """
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -18,10 +22,5 @@ def add_review(request, product_id):
         else:
             messages.error(
                 request, 'Fail to upload review. Please try again')
-        return redirect(reverse('product_detail', args=[product_id]))
+    return redirect(reverse('product_detail', args=[product_id]))
 
-    template = 'products/product_detail.html'
-    context = {
-        'form': form,
-    }
-    return render(request, template, context)

@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
+from reviews.forms import ReviewForm
 
 # Create your views here.
 
@@ -73,9 +74,12 @@ def product_detail(request, product_id):
     Code taken from Boutique Ado CI tutorial
     """
     product = get_object_or_404(Product, pk=product_id)
-
+    form = ReviewForm(request.POST)
+    reviews = product.reviews.all()
     context = {
         'product': product,
+        'form': form,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)
