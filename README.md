@@ -143,6 +143,7 @@ If the admin is logged the account submenu will show 3 links: Profile, Logout an
 * Add side advertisement in product page.
 * Add special offers in product page.
 * Add ability to pay via paypal and other payment methods.
+* Add the star rating to reviews to enable the automatic update of product's rating when a customer adds a review.
 
 
 ## **_Technology Used_** 

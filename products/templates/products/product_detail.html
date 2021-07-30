@@ -126,12 +126,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-review ">
-                <div class="col col-review ml-5 mr-5 ">
-                    <p><strong>Reviews:</strong></p>
+            
+            <div class="row row-review mx-0">
+                <div class="col col-review ml-5 mr-5">
+                    <hr>
+                    <h2 class="mb-5 mt-4 text-center">Product Reviews</h2>
                     {% for review in product.reviews.all %}
-                    <p><strong >by: {{ review.profile.user.username }}</strong></p>
-                        <p>{{ review.review }}</p>
+                    <div class="card card-reviews mt-3">
+                    <p class="mt-2 ml-3 mb-1"><strong >Customer:</strong> {{ review.profile.user.username|upper }}</p>
+                        <div class="card-body mt-0">
+                            <p>{{ review.review }}</p>
+                        </div>
+                    </div>
                     {% endfor %}
                 </div>
             </div>

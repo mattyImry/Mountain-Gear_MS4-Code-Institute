@@ -143,9 +143,12 @@ hr {
 }
 
 .col-review {
-    margin-bottom: 200px;
-}
+   margin-bottom: 200px;
+} 
 
+.card-reviews{
+    border: 1px solid #545659;
+}
 .col-quantity {
     padding-left: 0;
 }
