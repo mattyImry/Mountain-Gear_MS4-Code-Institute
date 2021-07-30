@@ -143,12 +143,13 @@ hr {
 }
 
 .col-review {
-   margin-bottom: 200px;
+   margin-bottom: 100px;
 } 
 
 .card-reviews{
     border: 1px solid #545659;
 }
+
 .col-quantity {
     padding-left: 0;
 }
@@ -157,15 +158,10 @@ hr {
     margin-top: 100px;
 }
 
-
 .col-description {
     margin: 0 30px 50px ;
     
 }
-
-
-
-
 
 .update-link,
 .remove-item {

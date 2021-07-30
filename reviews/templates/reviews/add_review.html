@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container container-manager">
+        <div class="row">
+            <div class="col col-manager">
+                <hr>
+                <h2 class="text-center mb-3">Add review</h2>
+            </div>      
+        </div>
+        <div class="row">
+            <div class="col">
+                <form  class="form form-manager" method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <a href="{% url 'product_detail' product.id%}" class="btn gear-button rounded text-uppercase">
+                        <span class="text-uppercase"> <i class="fas fa-chevron-left"></i>  Cancel</span>
+                    </a>
+                    <button class="btn gear-button rounded text-uppercase" type="submit">Add Review
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
