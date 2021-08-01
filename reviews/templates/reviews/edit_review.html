@@ -16,17 +16,18 @@
         <div class="row">
             <div class="col col-manager">
                 <hr>
-                <h2 class="text-center mb-3">Edit review</h2>
-                
+                <h2 class="text-center mb-3">Edit review</h2>  
             </div>      
         </div>
         <div class="row">
             <div class="col">
-                <form action="{% url 'edit_review' product.id %}" class="form form-manager" method="POST" enctype="multipart/form-data">
+
+                <!--Form to edit review's product-->
+                <form action="{% url 'edit_review' review.id product.id %}" class="form form-manager" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     
                     {{ form|crispy }}
-                    <a href="{% url 'product_detail' product.id%}" class="btn gear-button rounded text-uppercase">
+                    <a href="{% url 'product_detail' product.id %}" class="btn gear-button rounded text-uppercase">
                         <span class="text-uppercase"> <i class="fas fa-chevron-left"></i>  Cancel</span>
                     </a>
                     <button class="btn gear-button rounded text-uppercase" type="submit">Edit Review
