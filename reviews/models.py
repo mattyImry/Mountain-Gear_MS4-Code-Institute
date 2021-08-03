@@ -9,3 +9,6 @@ class Review(models.Model):
     profile = models.ForeignKey(UserProfile, related_name='reviews', null=True,
                                 blank=True, on_delete=models.SET_NULL)
     review = models.TextField()
+
+    def __str__(self):
+        return self.reviews
