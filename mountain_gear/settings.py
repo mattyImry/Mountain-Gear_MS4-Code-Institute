@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'profiles',
     'contact_us',
     'reviews',
+    'wishlists',
 
     # Django apps
     'crispy_forms'

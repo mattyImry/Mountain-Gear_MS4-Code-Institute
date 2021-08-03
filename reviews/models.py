@@ -11,4 +11,4 @@ class Review(models.Model):
     review = models.TextField()
 
     def __str__(self):
-        return self.reviews
+        return self.review
