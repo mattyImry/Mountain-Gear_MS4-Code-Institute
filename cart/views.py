@@ -10,6 +10,7 @@ from products.models import Product
 def view_cart(request):
     """
     View to render cart page
+    Code taken from Boutique Ado CI tutorial
     """
     return render(request, 'cart/cart.html')
 
