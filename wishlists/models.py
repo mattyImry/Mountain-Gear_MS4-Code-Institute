@@ -7,6 +7,7 @@ class Wishlist(models.Model):
     """
     Model to create a wishlist
     For credit please refer to readme
+    for Slack post
     """
     user = models.ForeignKey(UserProfile, null=False, blank=False,
                              on_delete=models.CASCADE, related_name='wishlist')
@@ -27,4 +28,4 @@ class WishlistItem(models.Model):
                                 related_name='wishlist_products')
 
     def __str__(self):
-        return self.product
+        return self.product.name
