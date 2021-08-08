@@ -393,6 +393,18 @@ select option[value=""] {
     cursor: pointer;
 }
 
+/* Wishlist page */
+
+.col-wishlist {
+    margin-bottom: 100px;
+    
+}
+
+.btn-wishlist {
+    margin-bottom: 70px;
+}
+
+
 /* media query*/
 
 @media only screen and (min-width: 382px) and (max-width: 991px) {
@@ -421,6 +433,10 @@ select option[value=""] {
 
     .cart-qty {
         flex-basis: auto;
+    }
+
+    .col-wishlist {
+        margin-left: 20px;
     }
 
 }
