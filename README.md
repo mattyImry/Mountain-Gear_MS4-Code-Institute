@@ -4,8 +4,8 @@ Full Stack Frameworks with Django Milestone Project 4 - Code Institute
 
 # **_Mountain Gear_**
 
-This project is my fourth Milestone Project for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer Diploma. This project is designed to demostrate my capabilities to create a Full Stack web application with the use of [Python3](https://www.python.org/download/releases/3.0/) and 
-[Django](https://www.djangoproject.com/). The project is an e-commerce application which will be using a Sql type database to store product informations. Also in the database will be stored user informations to allow users to login, logout and store delivery informations.
+This project is my fourth Milestone Project for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer Diploma. This project is designed to demonstrate my capabilities to create a Full Stack web application with the use of [Python3](https://www.python.org/download/releases/3.0/) and 
+[Django](https://www.djangoproject.com/). The project is an e-commerce application which will be using a Sql type database to store products, users, orders, reviews and wishlists.
 
 
 ## **_UX_**  
@@ -15,12 +15,12 @@ I have designed this website to allow the User to be able to check and buy climb
 
 #### **_Data schema_**
 
-The database for this project is Sql. Sql works with tables instead of documents like in MongoDb databases. For the products of the website I have created 2 tables. One containing the categories of products and the second table containing the products. The products have all the related fields that descibe the product. Every product in the products table has a Primary Key and also a Category id which refer to the Primary key of each category in the catergories table.
-ADD SCREEN SHOT OF PRODUCT AND CAT ADMIN.
-There is also a table for the Users, reviews and wishlist.
-
-#### **_Security_**
-ADD SECURITY FEATURES OF Django
+The database for this project is Sql. Sql works with tables instead of documents like in MongoDb databases.
+* For the products of the website I have created 2 tables. One containing the categories of products and the second table containing the products. The products have all the related fields that describe the product. Every product in the product's table has a Primary Key and also a Category id which refer to the Primary key of each category in the categories table.
+* I have created a Order table to save orders and I have created a OrderLine Item table to save the products in the orders. To save the User's orders the user field has a foreign key to connect to the user which place the order. To save the products, in the order table, there is a user field as foreign key to connect to the user and also the product field uses a foreign key to connect with the product.
+* For the User I have created a table to store information of the user with all the related field necessary for delivery.
+* To save the reviews related to one product I have created a table with a User field with foreign key to connect to the user that created the review and also the products has a foreign key to connect to the product reviewed.
+* To save the wishlist I have created a table with the user field as a foreign key to relate the wishlist to the user and the product CHECK IN CASE YOU CHANGE THE MODEL.
 
 ### **_Scope_**
 
@@ -31,7 +31,7 @@ Features that I want to implement are:
 * Ability for the not registered User to buy climbing products.
 * Ability for the User to register an account. 
 * Ability for the registered User to receive confirmation emails for registration and order confirmation.
-* Ability for the registered User to retrive lost password for login.
+* Ability for the registered User to retrieve lost password for login.
 * Ability for the registered User to browse climbing products in different categories.
 * Ability for the registered User to buy climbing products.
 * Ability for the registered User to save items in the wishlist.
@@ -53,7 +53,7 @@ Features that I want to implement are:
 * The Equipment category is composed by 3 type of products: Ropes, Helmets and Harnesses.
 * The Clothing category is composed by 2 type of products: Shoes and Trousers.
 * The Camping category is composed by 2 type of products: Tents and Sleeping bags.
-* The Climbing shoes category is composed by 2 type of products: Mens and Womens.
+* The Climbing shoes category is composed by 2 type of products: Mens and Women.
 * A search function will allow Users to search products.  
 * The Categories are accessible from the main page under the search box if clicked a sub menu will open showing the types of products.  
 * The Users will be able to access registration, login/logout functionality from the navigation menu.  
@@ -74,24 +74,24 @@ Features that I want to implement are:
 * The contact page will hold a form to contact the developer.
 * The logo and "Home" link in the Navigation bar will redirect the Users to the main page and will always be present.
 * The shopping cart will display the products added in a card style format.
-* The checkout page will show the list of product and the form to add delievery and payment information with validation functionality.
+* The checkout page will show the list of product and the form to add delivery and payment information with validation functionality.
 
 ### **_Surface_**
 
-The website uses [Bootstrap](https://getbootstrap.com/) as a framework. Mobile first approch will be use. For the dign and look of the website I have taken ideas and styles from Boutique Ado Code Institute tutorial and [Gooutdoors](https://www.gooutdoors.co.uk/) e-commerce.
+The website uses [Bootstrap](https://getbootstrap.com/) as a framework. Mobile first approach will be use. For the design and look of the website I have taken ideas and styles from Boutique Ado Code Institute tutorial and [Gooutdoors](https://www.gooutdoors.co.uk/) e-commerce.
 The color use is mainly grey.
 * The color #545659 is used for the main navigation and footer.
 * The product bar uses color #9c9c9c.
 * When in mobile view main navigation the color #9c9c9c is used. I have decided to change color due to the size of the screen and by having a lighter grey the page is easier to read then using dark grey color #545659.
 * The buttons also use color #545659.
 * The text inside banners uses 2 colors. Black with in banners with color #9c9c9c and color #fafafa with banner color #545659 to help with contrast.
-* The fonts choosen are from [Google Fonts](https://fonts.google.com/) 'Oxygen' and as a back up 'sans-serif'.
+* The fonts chosen are from [Google Fonts](https://fonts.google.com/) 'Oxygen' and as a back up 'sans-serif'.
 * The icons used throughout the web site are from [Fontawesome](https://fontawesome.com/).
 
 
 ## **_Wireframes_**
 
-Link to Wireframes folder: [Wireframes]()
+Link to Wireframes folder: [Wireframes](wireframes/wireframes.pdf)
 
 ## **_User Story_**
 
@@ -108,10 +108,10 @@ Link to Wireframes folder: [Wireframes]()
 11. As a register User I want to be able to view purchase history.
 12. As a register User I want to be able to save my delivery information.
 13. As a register User I want to be able to receive email confirmation after check out.
-14. As a unregister / register I want to be able to search products.
-15. As a unregister / register  I want to be able to view a specific category of products.
-16. As a unregister / register I want to be able to view products added to shopping cart.
-17. As a unregister / register I want to be able to view confirmation / error messages during my activity within the website.
+14. As an unregister / register I want to be able to search products.
+15. As an unregister / register  I want to be able to view a specific category of products.
+16. As an unregister / register I want to be able to view products added to shopping cart.
+17. As an unregister / register I want to be able to view confirmation / error messages during my activity within the website.
 18. As admin I want to be able to add a product.
 19. As admin I want to be able to edit a product.
 20. As admin I want to be able to update a product.
@@ -134,7 +134,7 @@ If the admin is logged the account submenu will show 3 links: Profile, Logout an
 * Any User can see confirmations / error messages when completing actions on the website.
 * Any User can receive confirmation emails for order when compliting order form during checkout.
 * The register user can save delivery information safely.
-* The admin can modify , edit and remove products / categries via admin page.
+* The admin can modify, edit and remove products / categories via admin page.
 * The products and user information will be strored in a Sql type database.
 
 ### **_Features to be implemented_**
@@ -142,7 +142,7 @@ If the admin is logged the account submenu will show 3 links: Profile, Logout an
 * Ability to log in via social media.
 * Add side advertisement in product page.
 * Add special offers in product page.
-* Add ability to pay via paypal and other payment methods.
+* Add ability to pay via PayPal and other payment methods.
 * Add the star rating to reviews to enable the automatic update of product's rating when a customer adds a review.
 
 
@@ -152,10 +152,17 @@ If the admin is logged the account submenu will show 3 links: Profile, Logout an
 
 * [CSS](https://en.wikipedia.org/wiki/CSS)
 is a style sheet language. It is used to style markup language such as HTML.
+* [Python3](https://www.python.org/) is the programming language used mainly in this project.
 
 * [Gitpod](https://gitpod.io) has been used as an on-line IDE followed by [Heroku](https://www.heroku.com/) for deployment. IDE is a software application used by computer programmers for software development.
 * [Github](https://github.com/) has been used to store the code.
-* Stripe
+* [Googlefonts](https://fonts.google.com/) has been used to style the fonts of the writing on the web site.  
+* [Fontawesome](https://fontawesome.com/) has been used for the icons used in the forms and footer.
+* [jQuery](https://jquery.com/) has been used to initialize Materialize functionality and to add current year to footer.
+* [JavaScript](https://www.javascript.com/) has been used to be able to add the functionality for email service in contact page.
+* [Heroku](https://www.heroku.com/) is used to deploy and host the project.
+* [Stripe](https://stripe.com/en-it) is used to handle payments for the website.
+* [AWS S3](https://aws.amazon.com/s3/) - is used to Cloud storage for static and media files.
 
 ## **_Testing_**  
 
@@ -167,19 +174,71 @@ For the testing section please refer to TESTING.md file.
 
 * When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.
 
-* At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinetly without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeded and also the order is saved in the admin panel. After fixing the issue with gitpod this problem has disappeared. Now the postcode area input accepts only 5 numbers.
+* At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinitely without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeeded and also the order is saved in the admin panel. After fixing the issue with gitpod this problem has disappeared. Now the postcode area input accepts only 5 numbers.
 
 * When viewing some products in the products_details page, some of the product description are not rendering the same as the others. I have tried to remove or add more description but the result does not change.
 
 
 ## **_Deployment_**
 ### **_Local deployment_**
-### **_Heroku deployment_**
+
+1. To clone this repository you can do it directly into your IDE by copying the following to your terminal:  
+  `git clone https://github.com/mattyImry/Mountain-Gear_MS4-Code-Institute`  
+Or you can save a copy of this repository by clicking "Clone or download", then "Download Zip" button, and after extract the Zip file to your folder.
+2. In the terminal window change directory (CD) to the correct file location (directory that you have created for your repository).
+3. Set environment variables in your IDE:
+    DEVELOPMENT - Set to True
+    SECRET_KEY - From Django Secret Key Generator
+    STRIPE_PUBLIC_KEY - From Developer's API on the Stripe dashboard
+    STRIPE_SECRET_KEY - From Developer's API on the Stripe dashboard
+    STRIPE_WH_SECRET - From Stripe's developer API after creating a webhook
+4. From the file requirements.txt install the requirements. In your terminal type:  
+    `pip3 install -r requirements.txt`  
+    Please make sure to add `sudo` if you are not using GitPod  
+    `sudo pip3 install -r requirements.txt`
+5. Set up the database by running:
+    `python3 manage.py makemigrations`
+    `python3 manage.py migrate`
+6. Create the superUser to be able to access the admin panel. In your terminal type: 
+    `python3 manage.py createsuperuser`
+7. To start your server to view you website. In your terminal type: 
+    `python3 manage.py runserver`
+
+Now you can start deploying to [Heroku](https://www.heroku.com/).
+
+
+### **_Heroku deployment_**  
+
+1. Create a requirement.txt file that is need to Heroku to confirm dependences. In your terminal please type:  
+`pip3 freeze --local > requirements.txt`
+2. Create a Procfile to confirm to heroku apps the commands that are executed by the app.  
+`echo web: python run.py > Procfile`
+3. Add, commit and push these files to GitHub.
+4. In Heroku create a new app. The name has to be unique.
+5. In Heroku you need to link Github to Heroku via the dashboard link "Deploy".  
+ Go to "Deployment method" and choose "GitHub".  
+ Below Deployment method find you repository name listed and select it.  
+6. Still in Heroku go to "Settings" and click "Reveal Config Vars"
+7. In this section you need to fill in the inputs field with the environment variables.
+    AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY
+    DATABASE_URL
+    EMAIL_HOST_PASSWORD
+    EMAIL_HOST_USER
+    SECRET_KEY
+    STRIPE_PUBLIC_KEY
+    STRIPE_SECRET_KEY
+    STRIPE_WH_SECRET
+    USE_AWS
+8. Then enable "Automatic deploys".
+9. In "Manual Deployment" click "Deploy Branch".
+10. You should get the message "Your app is succesfully deployed".
+11. Click "View" to lunch the app.
 
 ## **_Credits_**
 
 * This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institute. On top of codes and functions you can see the reference for the code.
-* To adjust the font size ,for mobile view, of the icons in the navbar-mobile, the toggle-button and the increse/decrese buttons in product detail page, the code come from Boutique Ado.
+* To adjust the font size ,for mobile view, of the icons in the navbar-mobile, the toggle-button and the increase/decrease buttons in product detail page, the code come from Boutique Ado.
 * To use the widget from Django for the contact form I looked at this post from [StackOverflow.com](https://stackoverflow.com/questions/4101258/how-do-i-add-a-placeholder-on-a-charfield-in-django).
 * To start the reviews app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1622458371215100) 
 * To start the wishlist app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1613328233372000?thread_ts=1613310583.353100&cid=C7HS3U3AP)

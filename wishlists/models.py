@@ -12,7 +12,9 @@ class Wishlist(models.Model):
     user = models.ForeignKey(UserProfile, null=False, blank=False,
                              on_delete=models.CASCADE, related_name='wishlist')
 
-    products = models.ManyToManyField(Product, through='WishlistItem')
+    products = models.ForeignKey(Product, null=False, blank=False,
+                                 on_delete=models.CASCADE,
+                                 related_name='product', default=1)
 
     def __str__(self):
         return f'Wishlist ({self.user})'

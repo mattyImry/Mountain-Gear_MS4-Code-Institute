@@ -19,61 +19,55 @@
                 <hr>
                 <h2 class="text-center mb-3 ">Wishlist</h2>
             </div> 
-            <div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-wishlist mb-8">
-                                <div class="shadow rounded card h-100">
-                                    {% if product.image %}  
-                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-        
+        </div>
+        <div class="row">
+
+            <!--Displaying products in wishlist-->
+            {% for wishitem in wishlist %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-wishlist">
+                    <div class="shadow rounded card h-100">
+                        
+                        {% if wishitem.products.image %}  
+                            <img class="card-img-top img-fluid" src="{{ wishitem.products.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+                        {% endif %}
+
+                        <div class="card-body pb-0 pt-0">
+                            <p >{{ wishitem.products.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 text-left pt-0">
+                            <div class="row">
+                                <div class="col">
+                                    <p class=" text-left price-tag mb-0">£{{ wishitem.products.price }}</p>
+                                    {% if wishitem.products.rating %}
+                                        <small><i class="fas fa-star mr-1"></i>{{ wishitem.products.rating }} / 5</small>
                                     {% else %}
-                                        
-                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
-                                        
+                                        <small>No Rating</small>
                                     {% endif %}
-
-                                    {% if product.category %}
-                                        <div class="card-body pb-0 ">
-                                            {{ product.category.friendly_name }}
-                                        </div>
-                                    {% endif %}
-
-                                    <div class="card-body pb-0 pt-0">
-                                        <p >{{ product.name }}</p>
-                                    </div>
-                                    <div class="card-footer bg-white border-0 text-left pt-0">
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class=" text-left price-tag mb-0">£{{ product.price }}</p>
-                                                {% if product.rating %}
-                                                    <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                                {% else %}
-                                                    <small>No Rating</small>
-                                                {% endif %}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div>
-                                    <a href="{% url 'product_detail' product.id %}" class="btn gear-button rounded text-uppercase mt-3">
-                                        <span class="text-uppercase">Add to cart
-                                        </span>
-                                    </a>
                                 </div>
                             </div>
+                        </div>
                         
-                    {% endfor %}
-                </div>
-                <div class="row">
-                    <div class="btn-wishlist ml-3">
-                        <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">
-                            <span class="text-uppercase"> <i class="fas fa-chevron-left"></i>  Keep shopping</span>
+                    </div>
+                    <div>
+                        <a href="" class="btn gear-button rounded text-uppercase mt-3">
+                            <span class="text-uppercase">Add to cart
+                            </span>
                         </a>
+                        <a href="">Remove from wishlist</a>
                     </div>
                 </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col btn-wishlist">
+                <a href="{% url 'products' %}" class="btn gear-button rounded text-uppercase">
+                    <span class="text-uppercase"> <i class="fas fa-chevron-left"></i>  Keep shopping</span>
+                </a>
             </div>
         </div>
+        
     </div>
+    
 {% endblock %}
