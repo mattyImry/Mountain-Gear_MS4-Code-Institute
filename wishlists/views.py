@@ -9,6 +9,7 @@ def view_wishlist(request):
     """
     View to display wishlist
     """
+    
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.filter(user=user)
     
@@ -16,6 +17,7 @@ def view_wishlist(request):
     context = {
         
         'wishlist': wishlist,
+        
     }
     return render(request, template, context)
 

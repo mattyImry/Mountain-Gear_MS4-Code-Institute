@@ -152,6 +152,7 @@ If the admin is logged the account submenu will show 3 links: Profile, Logout an
 
 * [CSS](https://en.wikipedia.org/wiki/CSS)
 is a style sheet language. It is used to style markup language such as HTML.
+* [Bootstrap](https://getbootstrap.com/) to design a responsive web design
 * [Python3](https://www.python.org/) is the programming language used mainly in this project.
 
 * [Gitpod](https://gitpod.io) has been used as an on-line IDE followed by [Heroku](https://www.heroku.com/) for deployment. IDE is a software application used by computer programmers for software development.
@@ -241,7 +242,11 @@ Now you can start deploying to [Heroku](https://www.heroku.com/).
 * To adjust the font size ,for mobile view, of the icons in the navbar-mobile, the toggle-button and the increase/decrease buttons in product detail page, the code come from Boutique Ado.
 * To use the widget from Django for the contact form I looked at this post from [StackOverflow.com](https://stackoverflow.com/questions/4101258/how-do-i-add-a-placeholder-on-a-charfield-in-django).
 * To start the reviews app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1622458371215100) 
-* To start the wishlist app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1613328233372000?thread_ts=1613310583.353100&cid=C7HS3U3AP)
+* To start the wishlist app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1613328233372000?thread_ts=1613310583.353100&cid=C7HS3U3AP) and [StackOverflow.com](https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django)
+* Bootstrap documentation
+* Code institute course material
+* Django documentation
+* The images for the products and the descriptions are taken from [GoOutdoors](https://www.gooutdoors.co.uk/).
 
 
 

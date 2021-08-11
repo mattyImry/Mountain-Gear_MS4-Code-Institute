@@ -28,9 +28,9 @@
                     <div class="shadow rounded card h-100">
                         
                         {% if wishitem.products.image %}  
-                            <img class="card-img-top img-fluid" src="{{ wishitem.products.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ wishitem.products.image.url }}" alt="{{ wishitem.products.name }}">
                         {% else %}
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ wishitem.products.name }}">
                         {% endif %}
 
                         <div class="card-body pb-0 pt-0">

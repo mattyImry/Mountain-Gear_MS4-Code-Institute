@@ -1,0 +1,122 @@
+### **_Browser compatibility_**
+  
+The project ahd been tested in the following browsers without any compatibility issue:  
+* Google Chrome    
+* Microsoft Edge  
+* Firefox  
+* Opera  
+
+The project has also been tested on different screen sizes. 15" and 14" inch laptop, 24" screen and 20" screen.
+
+### **_Responsiveness_**
+
+As already specified in the "Surface" part in README file, the project has been developed with mobile first approach.
+
+The project has been tested in mobile view in the following devices without any compatibility issue: 
+
+* Motorola G5, G8 and G9
+* Iphone 6
+* Ipad 2
+
+### **_Automated testing_**
+
+### **_Manual testing_**
+
+#### **_Landing page_**
+
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking "Enter" button | Redirect to Product page | Yes
+Clicking "Contact us" icon | Redirect to the Contact page | Yes
+
+#### **_Nav bar_**
+
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking the "Logo" | Redirected to landing page | Yes  
+Clicking the "Account" link | Open drop down menu | Yes  
+Clicking the "Register" link in the "Account" dropdown | Redirect to register page | Yes
+Clicking the "Login" link in the "Account" dropdown | Redirect to login page | Yes
+Clicking the "Profile" link in the "Account" dropdown | Redirect to profile page | Yes
+Clicking the "Wishlist" link in the "Account" dropdown | Redirect to wishlist page | Yes
+Clicking the "Logout" link in the "Account" dropdown | Redirect to logout page | Yes
+Clicking the "Products menu" link in the "Account" dropdown (Only visible to superuser)| Redirect to add product page | Yes
+Clicking the "Cart" icon | Redirect to the Cart page | Yes  
+Writing in the search bar | Return the items searched | Yes  
+Clicking the "Our product" link | Open drop down menu |Yes  
+Clicking the "Price" link in the "Our product" dropdown | Display product by price | Yes
+Clicking the "Ratings" link in the "Our product" dropdown | display product by ratings | Yes
+Clicking the "Categories" link in the "Our product" dropdown | display product by categories | Yes
+Clicking the "All products" link in the "Our product" dropdown | dispay all product | Yes
+Clicking the "Equipment" link | Open drop down menu |Yes  
+Clicking the "Ropes" link in the "Equipment" dropdown | Display all rope products | Yes
+Clicking the "Helmets" link in the "Equipment" dropdown | Display all helmet product | Yes
+Clicking the "Harnesses" link in the "Equipment" dropdown | Display all harnesses product | Yes
+Clicking the "Clothing" link | Open drop down menu |Yes  
+Clicking the "Shoes" link in the "Equipment" dropdown | Display all shoes products | Yes
+Clicking the "Trousers" link in the "Equipment" dropdown | Display all torusers product | Yes
+Clicking the "Camping" link | Open drop down menu |Yes  
+Clicking the "Tent" link in the "Equipment" dropdown | Display all tent products | Yes
+Clicking the "Sleeping bags" link in the "Equipment" dropdown | Display all sleeping bags product | Yes
+Clicking the "Climbing shoes" link | Open drop down menu |Yes  
+Clicking the "Mens" link in the "Equipment" dropdown | Display all Mens climbing shoes products | Yes
+Clicking the "Womens" link in the "Equipment" dropdown | Display all womens climbing shoes product | Yes
+
+
+#### **_Product page_**
+
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking on any product image | Redirect to the product detail page of the selected product | Yes
+Clicking on "edit" link in the product card | Redirect to the edit product page to related product selected | Yes
+Clicking on "delete" link in the product card | Delete the related product also in database and message confirmation appear| Yes
+Clicking on the "category" link in the product card | Redirect to the products' category displaing all product in that category | Yes
+Clicking in the sort box | Drop down menu display | Yes
+Clicking "Price low to high" link in the sort box drop down | Display products by low to high price | Yes
+Clicking "Price high to low" link in the sort box drop down | Display products by high to low price | Yes
+Clicking "Rating high to low" link in the sort box drop down | Display products by high to low ratings | Yes
+Clicking "Rating low to high" link in the sort box drop down | Display products by low to high Rating | Yes
+Clicking "Name (A-Z)" link in the sort box drop down | Display products by alphabetical order from A to Z | Yes
+Clicking "Name (Z-A)" link in the sort box drop down | Display products by alphabetical order from Z to A | Yes
+Clicking "Category (Z-A)" link in the sort box drop down | Display products by category order from Z to A | Yes
+Clicking "Category (A-Z)" link in the sort box drop down | Display products by category order from A to Z | Yes
+
+
+#### **_Product detail page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+By clicking the plus or minus button in the quantity box | Number is changing related to the plus or minus click | Yes
+By adjusting the quantity box and then clicking "Add to cart" | Product added with the right quantity to cart | Yes
+Clicking "Add to cart" | The selected product is added to the cart | Yes
+By clicking "Keep shopping " button | Redirect to the product page | Yes
+Clicking on the "category" link | Redirect to the products' category displaying all product in that category | Yes
+Clicking on "edit" product link | Redirect to the edit product page to related product selected | Yes
+Clicking on "delete" product link | Delete the related product also in database and message confirmation appear | Yes
+Clicking on "Add review" | Redirect to add review page | Yes
+Clicking on "Edit" review link if review is present| Redirect to edit review page | Yes
+Clicking on "Delete" review link if review is present | Review deleted, remove from database and message confirmation displayed | Yes
+
+
+#### **_Add review page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+By clicking the "Add review" button without writing in the text box | Message "Please fill in this field" apper | Yes
+By clicking the "Cancel" button | Redirect to product detail page | Yes
+Filling the text box and click "Add Review" button |Redirected to product detail page, review added to product, added to database and message confirmation displayed| Yes
+
+
+#### **_Edit review page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking on "Edit" review link if review is present| Redirect to edit review page | Yes
+Modifing the text then click "Edit review" button | Edit review , edit in database message confirmation displayed| Yes
+By clicking the "Cancel" button | Redirect to product detail page | Yes
+
+
+
+
+
+
+
+
+
