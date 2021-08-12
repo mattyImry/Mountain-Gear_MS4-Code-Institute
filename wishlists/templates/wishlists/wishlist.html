@@ -28,12 +28,13 @@
                     <div class="shadow rounded card h-100">
                         
                         {% if wishitem.products.image %}  
-                            <img class="card-img-top img-fluid" src="{{ wishitem.products.image.url }}" alt="{{ wishitem.products.name }}">
+                            <img class="card-img-top img-fluid" src="{{ wishitem.products.image.url }}" alt="{{ wishitem.wishlist_products.name }}">
                         {% else %}
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ wishitem.products.name }}">
                         {% endif %}
 
                         <div class="card-body pb-0 pt-0">
+                            <p >{{ wishitem.user }}</p>
                             <p >{{ wishitem.products.name }}</p>
                         </div>
                         <div class="card-footer bg-white border-0 text-left pt-0">
@@ -51,10 +52,11 @@
                         
                     </div>
                     <div>
-                        <a href="" class="btn gear-button rounded text-uppercase mt-3">
+                        <a href="{% url 'product_detail' wishitem.products.id %}" class="btn gear-button rounded text-uppercase mt-3">
                             <span class="text-uppercase">Add to cart
                             </span>
                         </a>
+                    
                         <a href="">Remove from wishlist</a>
                     </div>
                 </div>

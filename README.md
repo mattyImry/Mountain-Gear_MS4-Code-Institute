@@ -91,7 +91,7 @@ The color use is mainly grey.
 
 ## **_Wireframes_**
 
-Link to Wireframes folder: [Wireframes](wireframes/wireframes.pdf)
+Link to Wireframes folder: [Wireframes](docs/wireframes.pdf)
 
 ## **_User Story_**
 
@@ -177,7 +177,6 @@ For the testing section please refer to TESTING.md file.
 
 * At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinitely without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeeded and also the order is saved in the admin panel. After fixing the issue with gitpod this problem has disappeared. Now the postcode area input accepts only 5 numbers.
 
-* When viewing some products in the products_details page, some of the product description are not rendering the same as the others. I have tried to remove or add more description but the result does not change.
 
 
 ## **_Deployment_**

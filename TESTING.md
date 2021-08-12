@@ -20,6 +20,27 @@ The project has been tested in mobile view in the following devices without any 
 
 ### **_Automated testing_**
 
+The html files has been validating using [W3 markup validator](https://validator.w3.org/).
+I have a warning for the javascipt attribute type marked as unecessary which is present in the majority of the pages.
+I also have an error coming from the html which state "Stray end tag div".
+Pages affected:
+
+1. Profile
+2. Wishlist
+3. Product menu
+4. Log in
+
+I have checked all the html via the validator and by hand without founding the missing bracket. It appears to be prominent in the pages under the account menu in the navbar. I have checked the includes for the mobile-top-header.html and includes main-nav.html without founding the issue. I cannot see any wrong displaying of the pages in the live site. Please refer to the picturew below.
+[HTML Error](docs/validator1.jpg)
+
+To validate the css I have used [W3 css validator](https://jigsaw.w3.org/css-validator/).
+No error or warnings detected.
+
+To validate javascript files I have used [Jshint](https://jshint.com/).
+No error detected.
+
+Python code as been checked for PEP8 standard. The only errors left in the Python pages are only present in pages pre created by Django.
+
 ### **_Manual testing_**
 
 #### **_Landing page_**
@@ -68,7 +89,7 @@ Clicking the "Womens" link in the "Equipment" dropdown | Display all womens clim
 action taken | expected result | functional 
 ------------ | --------------- | --------- |
 Clicking on any product image | Redirect to the product detail page of the selected product | Yes
-Clicking on "edit" link in the product card | Redirect to the edit product page to related product selected | Yes
+Clicking on "edit" link in the product card | Redirect to the edit product page to related product selected, message alert displayed | Yes
 Clicking on "delete" link in the product card | Delete the related product also in database and message confirmation appear| Yes
 Clicking on the "category" link in the product card | Redirect to the products' category displaing all product in that category | Yes
 Clicking in the sort box | Drop down menu display | Yes
@@ -90,7 +111,7 @@ By adjusting the quantity box and then clicking "Add to cart" | Product added wi
 Clicking "Add to cart" | The selected product is added to the cart | Yes
 By clicking "Keep shopping " button | Redirect to the product page | Yes
 Clicking on the "category" link | Redirect to the products' category displaying all product in that category | Yes
-Clicking on "edit" product link | Redirect to the edit product page to related product selected | Yes
+Clicking on "edit" product link | Redirect to the edit product page to related product selected, message alert displayed | Yes
 Clicking on "delete" product link | Delete the related product also in database and message confirmation appear | Yes
 Clicking on "Add review" | Redirect to add review page | Yes
 Clicking on "Edit" review link if review is present| Redirect to edit review page | Yes
@@ -111,6 +132,34 @@ action taken | expected result | functional
 Clicking on "Edit" review link if review is present| Redirect to edit review page | Yes
 Modifing the text then click "Edit review" button | Edit review , edit in database message confirmation displayed| Yes
 By clicking the "Cancel" button | Redirect to product detail page | Yes
+
+
+#### **_Product menu page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking category dropdown | Showing all categories | Yes
+Clicking has sizes dropdown | Showing Unknown ,yes,no | Yes
+Clicking has numbers dropdown | Showing Unknown ,yes,no | Yes
+By not filling the star marked field | Message "Please fill in this field" appear | Yes
+Clicking "Select Image" button | Opens a windows to select picture from harddisk | Yes
+By filling the form completelyand clicking " Add product" button | Form submitted , message confirmation displayed, product added to database | Yes
+Clicking "Cancel" button | Redirect to products page | Yes
+
+
+#### **_ Edit Product page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Modifing the fields, filling the starred field  clicking "edit product" button | Product modified and message confirmation displayed | Yes
+Selecting the remove box and clicking "edit product" button | Picture succesfully removed | Yes
+Clicking "Select Image" button | Opens a windows to select picture from harddisk | Yes
+If the starred fields are not populated | Message "Please fill in this field" appear on field not populated, form cannot be submitted | Yes
+Clicking "Cancel" button | Redirect to products page | Yes
+
+#### **_ Profile page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking country dropdown | Showing all country | Yes
+Adding the fields required 
 
 
 

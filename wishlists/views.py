@@ -9,39 +9,38 @@ def view_wishlist(request):
     """
     View to display wishlist
     """
-    
+    # product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.filter(user=user)
-    
+    print(wishlist)
     template = 'wishlists/wishlist.html'
     context = {
-        
+
         'wishlist': wishlist,
-        
+        # 'product': product,
     }
     return render(request, template, context)
 
 
 @login_required
 def add_to_wishlist(request, product_id):
-
+    
     user = get_object_or_404(UserProfile, user=request.user)
-
     product = get_object_or_404(Product, pk=product_id)
-    wishlist = Wishlist(user=user, products=product)
+    products = Wishlist.objects.get_or_create(products=product, user=user)
+    #user = get_object_or_404(UserProfile, user=request.user)
+    #wishlist = Wishlist(user=user, products=product)
 
+    #wishlist.save()
+    #print(product)
+    #print(user)
+    #print(wishlist)
 
-    wishlist.save()
     messages.success(
         request, f'Added {product.name} to your wishlist')
-    
-    template = 'wishlists/wishlist.html'
-    context = {
-        'product': product,
-        'wishlist': wishlist,
-        
-    }
-    return redirect('view_wishlist')
+    product_id = product_id
+
+    return redirect(reverse('view_wishlist'))
 
 
 """
