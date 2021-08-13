@@ -21,6 +21,7 @@ class Wishlist(models.Model):
 
 
 class WishlistItem(models.Model):
+    
     wishlist = models.ForeignKey(Wishlist, null=False, blank=False,
                                  on_delete=models.CASCADE,
                                  related_name='wishlist_items')

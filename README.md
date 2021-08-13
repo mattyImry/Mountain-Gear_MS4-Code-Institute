@@ -20,7 +20,7 @@ The database for this project is Sql. Sql works with tables instead of documents
 * I have created a Order table to save orders and I have created a OrderLine Item table to save the products in the orders. To save the User's orders the user field has a foreign key to connect to the user which place the order. To save the products, in the order table, there is a user field as foreign key to connect to the user and also the product field uses a foreign key to connect with the product.
 * For the User I have created a table to store information of the user with all the related field necessary for delivery.
 * To save the reviews related to one product I have created a table with a User field with foreign key to connect to the user that created the review and also the products has a foreign key to connect to the product reviewed.
-* To save the wishlist I have created a table with the user field as a foreign key to relate the wishlist to the user and the product CHECK IN CASE YOU CHANGE THE MODEL.
+* To read about the schema for the wishlist model please refer to bug and fixes section.
 
 ### **_Scope_**
 
@@ -169,11 +169,16 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 For the testing section please refer to TESTING.md file.
 
-## **_Bugs and fixes_*
+## **_Bugs and fixes_**
 
-* Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my cart.view.py where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with consistent "if statements".
+### **_Wishlist app_**
 
-* When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.
+I run in many issues when writing the wishlist app. The main issue was the functionality to add to the wishlist a product. After debugging the `add_to_wishlist` view with tutoring a few times came clear that the issue was the way the model is designed. My itention was to create a wishlist and then via the `WishlistItem` part of the model to add this products to the wishlist. At the moment what is happening is that every time a user adds a product to the wishlist a new wishlist is created with one product attached. This is not what my initial idea was. Because I found it hard to implement this functionality I have decided to keep the wishlist app as it is to give the User a viable product. I understand that this is not the best route to take but I will implement the functionality as I will try to implement a many to many relationship in the model for the product field. ADD MENTOR COMMENTS
+
+### **_Other bags and fixes_**
+* Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my `cart.view.py` where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with consistent "if statements".
+
+* When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show up in the info message box. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.
 
 * At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinitely without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeeded and also the order is saved in the admin panel. After fixing the issue with gitpod this problem has disappeared. Now the postcode area input accepts only 5 numbers.
 
@@ -241,7 +246,7 @@ Now you can start deploying to [Heroku](https://www.heroku.com/).
 * To adjust the font size ,for mobile view, of the icons in the navbar-mobile, the toggle-button and the increase/decrease buttons in product detail page, the code come from Boutique Ado.
 * To use the widget from Django for the contact form I looked at this post from [StackOverflow.com](https://stackoverflow.com/questions/4101258/how-do-i-add-a-placeholder-on-a-charfield-in-django).
 * To start the reviews app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1622458371215100) 
-* To start the wishlist app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1613328233372000?thread_ts=1613310583.353100&cid=C7HS3U3AP) and [StackOverflow.com](https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django)
+* To debugged wishlist app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1613328233372000?thread_ts=1613310583.353100&cid=C7HS3U3AP) and [StackOverflow.com](https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django)
 * Bootstrap documentation
 * Code institute course material
 * Django documentation

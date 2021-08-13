@@ -4,6 +4,10 @@ from products.models import Product
 
 
 class Review(models.Model):
+
+    """
+    Model to save reviews
+    """
     product = models.ForeignKey(Product, related_name='reviews', null=True,
                                 blank=True, on_delete=models.SET_NULL)
     profile = models.ForeignKey(UserProfile, related_name='reviews', null=True,

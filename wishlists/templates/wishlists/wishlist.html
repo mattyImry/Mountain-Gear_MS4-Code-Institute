@@ -57,7 +57,7 @@
                             </span>
                         </a>
                     
-                        <a href="">Remove from wishlist</a>
+                        <a href="{% url 'delete_product_wishlist' wishitem.products.id  %}">Remove from wishlist</a>
                     </div>
                 </div>
             {% endfor %}
