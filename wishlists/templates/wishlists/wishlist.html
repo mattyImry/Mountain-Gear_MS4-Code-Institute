@@ -34,7 +34,7 @@
                         {% endif %}
 
                         <div class="card-body pb-0 pt-0">
-                            <p >{{ wishitem.user }}</p>
+                            
                             <p >{{ wishitem.products.name }}</p>
                         </div>
                         <div class="card-footer bg-white border-0 text-left pt-0">
@@ -57,7 +57,8 @@
                             </span>
                         </a>
                     
-                        <a href="{% url 'delete_product_wishlist' wishitem.products.id  %}">Remove from wishlist</a>
+                        <a href="{% url 'delete_product_wishlist' wishitem.products.id  %}" class="mt-2">Remove</a>
+                    
                     </div>
                 </div>
             {% endfor %}

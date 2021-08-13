@@ -5,7 +5,7 @@ from products.models import Product
 
 class Wishlist(models.Model):
     """
-    Model to create a wishlist
+    Model to create a wishlist and wishlist item
     For credit please refer to readme
     for Slack post
     """
@@ -21,7 +21,7 @@ class Wishlist(models.Model):
 
 
 class WishlistItem(models.Model):
-    
+
     wishlist = models.ForeignKey(Wishlist, null=False, blank=False,
                                  on_delete=models.CASCADE,
                                  related_name='wishlist_items')

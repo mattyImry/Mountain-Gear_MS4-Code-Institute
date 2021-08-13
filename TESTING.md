@@ -108,7 +108,8 @@ action taken | expected result | functional
 ------------ | --------------- | --------- |
 By clicking the plus or minus button in the quantity box | Number is changing related to the plus or minus click | Yes
 By adjusting the quantity box and then clicking "Add to cart" | Product added with the right quantity to cart | Yes
-Clicking "Add to cart" | The selected product is added to the cart | Yes
+Clicking "Add to cart" | The selected product is added to the cart and message confirmation displayed with pricing | Yes
+Clicking "go to checkout" button in the message confirmation box | redirect to the checkout pgae | Yes
 By clicking "Keep shopping " button | Redirect to the product page | Yes
 Clicking on the "category" link | Redirect to the products' category displaying all product in that category | Yes
 Clicking on "edit" product link | Redirect to the edit product page to related product selected, message alert displayed | Yes
@@ -155,17 +156,47 @@ Clicking "Select Image" button | Opens a windows to select picture from harddisk
 If the starred fields are not populated | Message "Please fill in this field" appear on field not populated, form cannot be submitted | Yes
 Clicking "Cancel" button | Redirect to products page | Yes
 
+
 #### **_ Profile page_**
 action taken | expected result | functional 
 ------------ | --------------- | --------- |
 Clicking country dropdown | Showing all country | Yes
-Adding the fields required 
+Populating the fields in the form and click "Update information" button | Details fo user saved in database and message confirmation displayed | Yes
+Clicking on the Order number link | Redirect to display the order selected | Yes
 
 
+#### **_ Order history page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking "Back to profile" button | Redirect to profile page | Yes
 
 
+#### **_ Wishlist page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking "Add to cart" button | Redirect to product details page for the selected product | Yes
+Clicking "Delete" link | Product removed from wishlist and message confirmation displayed  | Yes
+Clicking "Keep shopping" button | Redirect to products page | Yes
 
 
+#### **_ Logout page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Clicking "Cancel" button | Redirect to landing page | Yes
+Clicking "Sign out" button | Redirect to landing page as logged out user | Yes
+
+
+#### **_ Login page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Not filling the fields in the form and pressing "Sign in" button | Message "Please fill in this field" appear on field not populated | Yes
+By filling the form correctly | User logged in | Yes
+By selecting the "Remember me" box | User logged in and credential saved for next  | yes
+
+#### **_ Cart page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+By clicking the plus or minus button in the quantity box | Number is changing related to the plus or minus click | Yes
 
 
 
