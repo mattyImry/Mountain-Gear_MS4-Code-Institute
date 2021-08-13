@@ -191,12 +191,16 @@ action taken | expected result | functional
 ------------ | --------------- | --------- |
 Not filling the fields in the form and pressing "Sign in" button | Message "Please fill in this field" appear on field not populated | Yes
 By filling the form correctly | User logged in | Yes
-By selecting the "Remember me" box | User logged in and credential saved for next  | yes
+By selecting the "Remember me" box | User logged in and credential saved for next  | Yes
+
 
 #### **_ Cart page_**
 action taken | expected result | functional 
 ------------ | --------------- | --------- |
-By clicking the plus or minus button in the quantity box | Number is changing related to the plus or minus click | Yes
-
+Clicking the plus or minus button in the quantity box | Number is changing related to the plus or minus click | Yes
+Clicking the "Update" link after selecting a new quantity | Message confirmation displayed with pricing and quantiy updated | Yes
+Clicking the "Delete" link | Irem removed form the cart | Yes
+Clicking the "Checkout" button | Redirect to checkout page | Yes
+Clicking the "Keep shopping" button | Redirect to products page | Yes
 
 
