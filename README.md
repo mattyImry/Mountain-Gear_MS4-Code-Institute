@@ -243,7 +243,7 @@ Now you can start deploying to [Heroku](https://www.heroku.com/).
 ## **_Credits_**
 
 * This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institute. On top of codes and functions you can see the reference for the code.
-* To adjust the font size ,for mobile view, of the icons in the navbar-mobile, the toggle-button and the increase/decrease buttons in product detail page, the code come from Boutique Ado.
+* To adjust the font size, for mobile view, of the icons in the navbar-mobile, the toggle-button and the increase/decrease buttons in product detail page, the code come from Boutique Ado.
 * To use the widget from Django for the contact form I looked at this post from [StackOverflow.com](https://stackoverflow.com/questions/4101258/how-do-i-add-a-placeholder-on-a-charfield-in-django).
 * To start the reviews app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1622458371215100) 
 * To start and debugged wishlist app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1613328233372000?thread_ts=1613310583.353100&cid=C7HS3U3AP) and [StackOverflow.com](https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django)

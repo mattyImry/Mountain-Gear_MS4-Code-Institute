@@ -1,6 +1,6 @@
 ### **_Browser compatibility_**
   
-The project ahd been tested in the following browsers without any compatibility issue:  
+The project has been tested in the following browsers without any compatibility issue:  
 * Google Chrome    
 * Microsoft Edge  
 * Firefox  
@@ -30,7 +30,7 @@ Pages affected:
 3. Product menu
 4. Log in
 
-I have checked all the html via the validator and by hand without founding the missing bracket. It appears to be prominent in the pages under the account menu in the navbar. I have checked the includes for the mobile-top-header.html and includes main-nav.html without founding the issue. I cannot see any wrong displaying of the pages in the live site. Please refer to the picturew below.
+I have checked all the html via the validator and by hand without founding the missing bracket. It appears to be prominent in the pages under the account menu in the navbar. I have checked the includes for the mobile-top-header.html and includes main-nav.html without founding the issue. I cannot see any wrong displaying of the pages in the live site. Please refer to the picture below.
 [HTML Error](docs/validator1.jpg)
 
 To validate the css I have used [W3 css validator](https://jigsaw.w3.org/css-validator/).
@@ -204,3 +204,15 @@ Clicking the "Checkout" button | Redirect to checkout page | Yes
 Clicking the "Keep shopping" button | Redirect to products page | Yes
 
 
+#### **_ Checkout page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Not filling the fields in the form marked with thw * and pressing "Complete Order" button | Message "Please fill in this field" appear on field not populated | Yes
+Clicking the dropdown menu "Coutnry" | Display all countries | Yes
+By filling the mandatory field and using the Stripe card number for testing "4242 4242 4242 4242  04 / 24  242  42424" then click "Complete Order" | Redirect to Checkout success page, Success message displayed, confirmation email reveived ( Also in terminal) with correct order number, order details, user's details and email address, Stripe Webhooks Succeded for "payment_intent.created", "payment_intent.suceeded", "Charge.suceeded", Webhooks received in terminal 200 message, Stripe Events dashboard " new payment created" and "The payment Succeeded" | Yes
+
+#### **_ Checkout success page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Page correctly display User's email address, Order number and order details | All detaild displaying correctly after success paymnet | Yes
+Clicking the "Keep shopping" button | Redirect to products page | Yes

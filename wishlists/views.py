@@ -22,7 +22,7 @@ def view_wishlist(request):
 @login_required
 def add_to_wishlist(request, product_id):
     """
-    view to add to wishlist
+    view to add a product to wishlist
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
@@ -38,11 +38,11 @@ def add_to_wishlist(request, product_id):
 def delete_product_wishlist(request, product_id):
 
     """
-    View to delete wishlist
+    View to delete a product from wishlist
     """
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.filter(products=product, user=user).delete()
 
-    messages.success(request, 'Product removed form wishlist!')
+    messages.success(request, f'Product {product.name} removed form wishlist!')
     return redirect(reverse('view_wishlist'))
