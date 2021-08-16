@@ -1,10 +1,8 @@
-from django.core.mail import EmailMessage, BadHeaderError
 from django.shortcuts import render, redirect, reverse
-from django.http import HttpResponse
 from django.contrib import messages
 from .forms import ContactForm
-
-import os
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 def contact_us(request):
@@ -13,20 +11,17 @@ def contact_us(request):
     """
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        user_email = request.POST.get('email')
+        user_message = request.POST.get('message')
+        subject = request.POST.get('subject')      
         if form.is_valid():
 
-            email = EmailMessage(
-                'Subject',
-                'Message',
-                os.environ.get("EMAIL"),
-                [os.environ.get("EMAIL")],
-                reply_to=[user_email],)
-
-            try:
-                email.send(fail_silently=False) 
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
+            # sending email to admin following a contact form submission
+            send_mail(
+                subject,
+                user_message,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.DEFAULT_FROM_EMAIL],
+                fail_silently=False,)
 
             messages.success(request, 'Your message has been sent!')
             return redirect(reverse('contact_us'))

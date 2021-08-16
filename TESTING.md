@@ -21,17 +21,7 @@ The project has been tested in mobile view in the following devices without any 
 ### **_Automated testing_**
 
 The html files has been validating using [W3 markup validator](https://validator.w3.org/).
-I have a warning for the javascipt attribute type marked as unecessary which is present in the majority of the pages.
-I also have an error coming from the html which state "Stray end tag div".
-Pages affected:
-
-1. Profile
-2. Wishlist
-3. Product menu
-4. Log in
-
-I have checked all the html via the validator and by hand without founding the missing bracket. It appears to be prominent in the pages under the account menu in the navbar. I have checked the includes for the mobile-top-header.html and includes main-nav.html without founding the issue. I cannot see any wrong displaying of the pages in the live site. Please refer to the picture below.
-[HTML Error](docs/validator1.jpg)
+No errors but I have a warning for the javascipt attribute type marked as unecessary which it is present in the majority of the pages.
 
 To validate the css I have used [W3 css validator](https://jigsaw.w3.org/css-validator/).
 No error or warnings detected.
@@ -40,6 +30,8 @@ To validate javascript files I have used [Jshint](https://jshint.com/).
 No error detected.
 
 Python code as been checked for PEP8 standard. The only errors left in the Python pages are only present in pages pre created by Django.
+
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools). DO NOT FORGET LIGHTHOUSE AFTER DEPLOY.
 
 ### **_Manual testing_**
 
@@ -111,6 +103,7 @@ By adjusting the quantity box and then clicking "Add to cart" | Product added wi
 Clicking "Add to cart" | The selected product is added to the cart and message confirmation displayed with pricing | Yes
 Clicking "go to checkout" button in the message confirmation box | redirect to the checkout pgae | Yes
 By clicking "Keep shopping " button | Redirect to the product page | Yes
+Clicking "Add to wishlist" | The selected product is added to the wishlist and message confirmation displayed | Yes
 Clicking on the "category" link | Redirect to the products' category displaying all product in that category | Yes
 Clicking on "edit" product link | Redirect to the edit product page to related product selected, message alert displayed | Yes
 Clicking on "delete" product link | Delete the related product also in database and message confirmation appear | Yes
@@ -221,5 +214,4 @@ Clicking the "Keep shopping" button | Redirect to products page | Yes
 action taken | expected result | functional 
 ------------ | --------------- | --------- |
 Not filling the fields in the form marked with the * and clicking "Send" button | Message "Please fill in this field" appear on field not populated | Yes
-By filling the mandatory field and clicking "Send" button | Message confirmation displayed and in terminal received | Yes
-DO NOT FORGET TO CHECK IF EMAIL ARRIVES IN INBOX AFTER DEPLOYMENT.
+By filling the mandatory field and clicking "Send" button | Message confirmation displayed and in terminal email printed | Yes
