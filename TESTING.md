@@ -207,7 +207,7 @@ Clicking the "Keep shopping" button | Redirect to products page | Yes
 #### **_ Checkout page_**
 action taken | expected result | functional 
 ------------ | --------------- | --------- |
-Not filling the fields in the form marked with thw * and pressing "Complete Order" button | Message "Please fill in this field" appear on field not populated | Yes
+Not filling the fields in the form marked with the * and pressing "Complete Order" button | Message "Please fill in this field" appear on field not populated | Yes
 Clicking the dropdown menu "Coutnry" | Display all countries | Yes
 By filling the mandatory field and using the Stripe card number for testing "4242 4242 4242 4242  04 / 24  242  42424" then click "Complete Order" | Redirect to Checkout success page, Success message displayed, confirmation email reveived ( Also in terminal) with correct order number, order details, user's details and email address, Stripe Webhooks Succeded for "payment_intent.created", "payment_intent.suceeded", "Charge.suceeded", Webhooks received in terminal 200 message, Stripe Events dashboard " new payment created" and "The payment Succeeded" | Yes
 
@@ -216,3 +216,10 @@ action taken | expected result | functional
 ------------ | --------------- | --------- |
 Page correctly display User's email address, Order number and order details | All detaild displaying correctly after success paymnet | Yes
 Clicking the "Keep shopping" button | Redirect to products page | Yes
+
+#### **_ Contact us page_**
+action taken | expected result | functional 
+------------ | --------------- | --------- |
+Not filling the fields in the form marked with the * and clicking "Send" button | Message "Please fill in this field" appear on field not populated | Yes
+By filling the mandatory field and clicking "Send" button | Message confirmation displayed and in terminal received | Yes
+DO NOT FORGET TO CHECK IF EMAIL ARRIVES IN INBOX AFTER DEPLOYMENT.
