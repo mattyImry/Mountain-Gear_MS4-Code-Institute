@@ -11,7 +11,7 @@ This project is my fourth Milestone Project for the [Code Institute](https://cod
 ## **_UX_**  
 ### **_Strategy / Site Owner story_**
 
-I have designed this website to allow the User to be able to check and buy climbing equipment. The main users will be climbers and mountain lovers. The User can come to the website and be able to purchase goods without the need of registering. If the User register an account within the website the user will be able to store delivery information to quickly checkout for the next purchases and be able to check an order history. For Admin and maintenance purposes an admin account will be created.
+I have designed this website to allow the User to be able to check and buy climbing equipment. The main users will be climbers and mountain lovers. The User can come to the website and be able to purchase goods without the need of registering. If the User register an account within the website the user will be able to store delivery information to quickly checkout for the next purchases, be able to check an order history, add reviews to products and create a wishlist. For Admin and maintenance purposes an admin account will be created.
 
 #### **_Data schema_**
 
@@ -175,6 +175,8 @@ For the testing section please refer to TESTING.md file.
 
 I run in many issues when writing the wishlist app. The main issue was the functionality to add to the wishlist a product. After debugging the `add_to_wishlist` view with tutoring a few times came clear that the issue was the way the model is designed. My itention was to create a wishlist and then via the `WishlistItem` part of the model to add this products to the wishlist. At the moment what is happening is that every time a user adds a product to the wishlist a new wishlist is created with one product attached. This is not what my initial idea was. Because I found it hard to implement this functionality I have decided to keep the wishlist app as it is to give the User a viable product. I understand that this is not the best route to take but I will implement the functionality as I will try to implement a many to many relationship in the model for the product field. ADD MENTOR COMMENTS
 
+The data schema for the wishlist at the moment take the user as a foreign key and one product foreign key and create one wishlist.
+
 ### **_Other bags and fixes_**
 * Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my `cart.view.py` where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with consistent "if statements".
 
@@ -251,7 +253,7 @@ Now you can start deploying to [Heroku](https://www.heroku.com/).
 * Code institute course material
 * Django documentation
 * The images for the products and the descriptions are taken from [GoOutdoors](https://www.gooutdoors.co.uk/).
-
+* Special thanks to the tutoring team and my mentor for the support given. 
 
 
 

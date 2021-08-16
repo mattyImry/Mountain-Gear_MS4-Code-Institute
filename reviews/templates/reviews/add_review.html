@@ -21,7 +21,8 @@
         </div>
         <div class="row">
             <div class="col">
-                <!--Form to add review to product-->
+
+                <!--Form to add review to a product-->
                 <form  class="form form-manager" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}

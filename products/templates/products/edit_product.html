@@ -14,6 +14,8 @@
     <div class="overlay"></div>
     <div class="container container-manager">
         <div class="row">
+
+            <!--Product manager page for admin to be able to edit products-->
             <div class="col col-manager">
                 <hr>
                 <h2 class="text-center mb-3">Product Manager</h2>
@@ -22,6 +24,8 @@
         </div>
         <div class="row">
             <div class="col">
+
+                <!--Form to edit product to site-->
                 <form action="{% url 'edit_product' product.id %}" class="form form-manager" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}

@@ -30,6 +30,7 @@
             <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            
             <!--Stripe js-->
             <script src="https://js.stripe.com/v3/"></script>
             
@@ -39,17 +40,22 @@
         {% endblock %}
 
         <title>Mountain Gear {% block extra_title %}{% endblock %}</title>
-        <!--favicon-->
+
+        <!--Favicon-->
         <link rel="shortcut icon" href="{% static 'favicon/rsz_gear_fav.png' %}" type="image/x-icon"/>
     </head>
     <body>
         <header class="container-fluid fixed-top ">
             <div class="row header-home d-none d-lg-flex top-header" id="topnav">
                 <div class="col text-center">
+
+                    <!--Logo-->
                     <a href="{% url 'home' %}" class="nav-link logo-link">
                         <h2 class="logo-text">Mountain<i class="fas fa-cogs"></i>Gear</h2>
                     </a>
                 </div>
+
+                <!--Searchbox-->
                 <div class="col search-box">
                     <form action="{% url 'products' %}" method="GET">
                         <div class="input-group w-100">
@@ -65,6 +71,8 @@
                     </form>
                 </div>
                <div class="col">
+
+                    <!-- Top Navigation links-->
                     <ul class="list-inline list-unstyled text-center text-lg-right">
                         <li class="list-inline-item dropdown">
                             <a href="#" class="nav-link logo-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -106,6 +114,8 @@
                 </div>
             </div>
             <div class="row">
+
+                <!-- Products and categories-->
                 <nav class="navbar navbar-expand-lg navbar-light w-100 mobile-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                         aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,13 +125,17 @@
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
+
+            <!-- Delivery banner-->
             <div id="delivery-banner" class="row text-center header-home ">
                 <div class="col bg-black text-white">
                     <h4 class="logo-font my-1">Get Free delivery when you spend over £{{ free_delivery_threshold }}!</h4>
                 </div>
             </div>
         </header>
-        <!--Code taken from Boutique Ado CI tutorial-->
+
+        <!--Code taken from Boutique Ado CI tutorial
+            displaying messages after user interaction-->
         {% if messages %}
             <div class="message-container">
             {% for message in messages %}
@@ -147,11 +161,14 @@
         {% endblock %}
 
         {% block postloadjs %}
+        
+        <!--Code taken from Boutique Ado CI tutorial-->
         <script type="text/javascript">
             $('.toast').toast('show');
         </script>
         {% endblock %}
         
+        <!--Footer-->
         <footer class="page-footer">
             <div class="footer-copyright ">
                 <div class="container footer-elements">

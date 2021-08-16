@@ -22,6 +22,8 @@
         </div>
         <div class="row">
             <div class="col">
+
+                <!--Display products in the cart-->
                 {% if cart_items %}
                     {% for item in cart_items %}
                         <div class="row">
@@ -44,6 +46,8 @@
                                 <form action="{% url 'adjust_cart' item.item_id %}" method="POST" class="form update-form">
                                     {% csrf_token %}
                                     <div class="form-group">
+
+                                        <!--Quantity box and plus and minus buttons -->
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <button class="decrement-qty btn btn-sm gear-button rounded"
@@ -62,6 +66,8 @@
                                                     <i class="fa-sm fas fa-plus"></i>
                                                 </button>
                                             </div>
+
+                                            <!--Checking if product has sizes or numbers-->
                                             {% if item.product.has_sizes %}
                                                 <input type="hidden" name="product_size" value="{{ item.size }}">
                                             {% endif %}
@@ -72,6 +78,8 @@
                                         </div>
                                     </div>
                                 </form>
+
+                                <!--Update and remove links-->
                                 <a class="update-link text-info"><small>Update</small></a>
                                 <a class="remove-item text-info float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size}}" data-product_number="{{ item.number }}"><small>Remove</small></a>
                                 <p class="my-0"><strong>Size:</strong>
@@ -94,6 +102,8 @@
                                 </span></a>
                                 
                             </div>
+
+                            <!--Sum for the cost of products including delivery-->
                             <div class="col-6 col-md-4 cart-tot mt-4 ">
                                 <h6><strong>Items Total: £{{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>

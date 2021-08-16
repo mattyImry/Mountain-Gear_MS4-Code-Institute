@@ -1,4 +1,6 @@
 <ul>
+
+    <!--Search box for mobile view-->
     <li class="list-inline-item">
         <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
@@ -23,6 +25,8 @@
     </li>
 </ul>
 <ul>
+
+    <!-- Top Navigation links-->
     <li class="list-inline-item dropdown">
         <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
@@ -46,11 +50,13 @@
     </li>
 </ul>
 <ul>
+
+    <!-- Displaying cart-->
     <li class="list-inline-item">
         <a class="{% if sum_total %} font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
             <div class="text-center">
                 <div><i class=" fa-lg fas fa-shopping-cart"></i></div>
-                <p class="my-0">
+                <p class="my-0 price-cart">
                     {% if sum_total %}
                         £{{ sum_total|floatformat:2 }}
                     {% else %}
