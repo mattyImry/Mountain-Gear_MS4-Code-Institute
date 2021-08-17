@@ -173,9 +173,9 @@ For the testing section please refer to TESTING.md file.
 
 ### **_Wishlist app_**
 
-I run in many issues when writing the wishlist app. The main issue was the functionality to add to the wishlist a product. After debugging the `add_to_wishlist` view with tutoring a few times came clear that the issue was the way the model is designed. My itention was to create a wishlist and then via the `WishlistItem` part of the model to add this products to the wishlist. At the moment what is happening is that every time a user adds a product to the wishlist a new wishlist is created with one product attached. This is not what my initial idea was. Because I found it hard to implement this functionality I have decided to keep the wishlist app as it is to give the User a viable product. I understand that this is not the best route to take but I will implement the functionality as I will try to implement a many to many relationship in the model for the product field. ADD MENTOR COMMENTS
+I run in many issues when writing the wishlist app. The main issue was the functionality to add to the wishlist a product. After debugging the `add_to_wishlist` view with tutoring a few times came clear that the issue was the way the model is designed. My itention was to create a wishlist and then via the `WishlistItem` part of the model to add this products to the wishlist. At the moment what is happening is that every time a user adds a product to the wishlist a new wishlist is created with one product attached. This is not what my initial idea was. Because I found it hard to implement this functionality I have decided to keep the wishlist app as it is to give the User a viable product. I understand that this is not the best route to take but I will implement the functionality as I will try to implement a many to many relationship in the model for the product field. I have spoken with my mentor about this issue and He was happy with my choice to keep a product functional for the user and that the issue is reported in the readme.
 
-The data schema for the wishlist at the moment take the user as a foreign key and one product foreign key and create one wishlist.
+The data schema for the wishlist at the moment take the user as a foreign key and one product foreign key and create one wishlist related to the user and the product added.
 
 ### **_Other bags and fixes_**
 * Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my `cart.view.py` where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with consistent "if statements".
@@ -187,6 +187,7 @@ The data schema for the wishlist at the moment take the user as a foreign key an
 
 
 ## **_Deployment_**
+
 ### **_Local deployment_**
 
 1. To clone this repository you can do it directly into your IDE by copying the following to your terminal:  
@@ -215,6 +216,11 @@ Now you can start deploying to [Heroku](https://www.heroku.com/).
 
 
 ### **_Heroku deployment_**  
+
+To deploy to heroku you will need to set up your "Postgress". 
+
+1. Creating a new app.
+2. In resources select add-on and choose Heroku Postgrees
 
 1. Create a requirement.txt file that is need to Heroku to confirm dependences. In your terminal please type:  
 `pip3 freeze --local > requirements.txt`
@@ -255,8 +261,3 @@ Now you can start deploying to [Heroku](https://www.heroku.com/).
 * The images for the products and the descriptions are taken from [GoOutdoors](https://www.gooutdoors.co.uk/).
 * Special thanks to the tutoring team and my mentor for the support given. 
 
-
-
-color main #545659
-color 2nd  #92a396
-color 2nd  #9c9c9c

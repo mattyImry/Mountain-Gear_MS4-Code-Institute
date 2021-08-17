@@ -7,7 +7,6 @@ body  {
     background-size: cover;
     height: calc(100vh - 214px);
     font-family: 'Oxygen', sans-serif;
-
 }
 
 /* Landing Page */
@@ -76,6 +75,7 @@ a:hover {
 input[name='q']::placeholder {
     color: #92a396;
 }
+
 /* from Bulma*/
 
 .icon {
@@ -168,7 +168,6 @@ hr {
     cursor: pointer;
 }
 
-
 /* Cart page */
 
 .container-cart {
@@ -187,6 +186,7 @@ hr {
 }
 
 /* Toasts  Code taken from Boutique ado*/
+
 .message-container {
     position: fixed;
     top: 80px;
@@ -404,7 +404,6 @@ select option[value=""] {
     margin-bottom: 70px;
 }
 
-
 /* media query*/
 
 @media only screen and (min-width: 382px) and (max-width: 991px) {
@@ -416,7 +415,6 @@ select option[value=""] {
     margin-top: 0;
     }
 }
-
 
 @media only screen and (max-width: 768px) {
     .col-detail {

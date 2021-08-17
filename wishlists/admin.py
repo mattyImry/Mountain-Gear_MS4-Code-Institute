@@ -1,5 +1,4 @@
 from django.contrib import admin
-from wishlists.models import Wishlist, WishlistItem
+from wishlists.models import Wishlist
 
 admin.site.register(Wishlist)
-admin.site.register(WishlistItem)
