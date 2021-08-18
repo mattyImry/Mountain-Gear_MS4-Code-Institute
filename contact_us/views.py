@@ -12,7 +12,7 @@ def contact_us(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         user_message = request.POST.get('message')
-        subject = request.POST.get('subject')      
+        subject = request.POST.get('subject')
         if form.is_valid():
 
             # sending email to admin following a contact form submission

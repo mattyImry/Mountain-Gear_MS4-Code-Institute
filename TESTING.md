@@ -29,7 +29,7 @@ No error or warnings detected.
 To validate javascript files I have used [Jshint](https://jshint.com/).
 No error detected.
 
-Python code as been checked for PEP8 standard. The only errors left in the Python pages are only present in pages pre created by Django.
+Python code as been checked for PEP8 standard. The only errors left in the Python pages are only present in pages pre created by Django, migrations file and settings.py file.
 
 * [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools). DO NOT FORGET LIGHTHOUSE AFTER DEPLOY.
 
@@ -215,3 +215,39 @@ action taken | expected result | functional
 ------------ | --------------- | --------- |
 Not filling the fields in the form marked with the * and clicking "Send" button | Message "Please fill in this field" appear on field not populated | Yes
 By filling the mandatory field and clicking "Send" button | Message confirmation displayed and in terminal email printed | Yes
+
+
+#### **_Error pages_**
+action taken | expected result | functional 
+------------ | --------------- | ----------
+Add an unexisting name on URL ending | page 404 shown to user | Yes
+
+#### **_User story_**
+user story | action taken | expected result | functional 
+-----------|------------ | --------------- | ----------
+1 | As an unregister / register User by going to https://mountain-gear-ms4.herokuapp.com/ and then click Enter | I can view all the products | Yes
+2 | As an unregister / register User by adding product to cart and then checkout | I get confirmation of my purchase via email and on the screen | Yes
+3 | As an unregister / register User by going to contact page and filling the form correctly | Message confirmation displayed and email receive to developer with User's message | Yes
+4, 9| As an unregister User by clicking "Register" link and filling the form correctly | Email to confirm registration received by the User and User registered in database | Yes
+5 | As a registered User by filling the Log in form correctly | User logged in | Yes
+6 | As a registered User by filling form correctly after clicking "Forgot password" | Email received by User with instruction to reset password | Yes
+7 | As a registered User by clicking "Log out" and then confirm log out | User logged out and redirect to landing page | Yes
+8 | As a registered User by clicking "Profile" link | Profile page open | Yes
+10| As a unregister / register User after adding any product to the cart | The cart logo display the sum of the cost of the products added to the cart visible if navigating the site in different pages | Yes
+11 | As a registered User by clicking "Profile" link | The User can see a list of orders made | Yes
+12 | As a registered User by clicking "Profile" link fill the "Default delivery information" form then click " Update information | Default delivery information save in the User account and in the database | Yes
+12 | As a registered User by filling the form during checkout and ticking the "Save delivery information to my profile" box | Delivery information save in the User account and in the database | Yes
+13 | As a registered User by filling correctly the form during checkout | Confimration email with details of the purchase received | Yes 
+14 | As an unregister / register User by typing products name or desciption in the search box | Products displayed correctly | Yes
+15 | As an unregister / register User by clicking the "Category" link under "Our product" link | Products displaying by category | yes
+16 | As an unregister / register User by clicking "Cart" logo after adding products to cart | The page shopping cart will display with the product added by the User | Yes
+17 | As an unregister / register User by interacting with the website | Messages for confimations and alert are displyed at the top right of the screen with meaningfull messages related to the action taken by the User | Yes
+18 | As Admin by clicking "Products menu" link under "Account" link and by filling the form correctly | Product added to the web site and in the database | Yes
+19 | As Admin by going to a product detail page and clicking the "Edit" link | Edit product page open and Admin able to edit details and save edited product. Display correctly in the web site and in the database | Yes
+20 | As Admin by going to the admin page and log in correctly | Access grated to the Admin panel | Yes
+21 | As Admin by going to a product detail page and clicking the "Delete" link | Product removed form website and from database | Yes
+22 | As Admin by going to the admin panel opening the "Review" section and selecting a review then delete review | Review deleted from website and database | Yes
+23 | As Admin by going to the admin panel opening the "Wishlist" section and selecting a wishlist then delete wishlist | Wishlist deleted from website and database | Yes
+24 | As Admin by going to the admin panel opening the "User" section and selecting a user then delete user | user deleted from  database | Yes
+25 | As Admin by going to the admin panel opening the "Order" section and selecting a Order then delete Order | Order deleted from website and database | Yes
+26 | As Admin by going to the admin panel opening the "Category" section and selecting a Category then delete Category | Category deleted from website and database | Yes

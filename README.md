@@ -104,7 +104,7 @@ Link to Wireframes folder: [Wireframes](docs/wireframes.pdf)
 7. As a register User I want to be able to logout to the website.
 8. As a register User I want to be able to view my profile.
 9. As a register User I want to be able to receive email confirmation after registration.
-10. As a register User I want to be able to view total purchase in every page.
+10. As a unregister / register User I want to be able to view total purchase in every page.
 11. As a register User I want to be able to view purchase history.
 12. As a register User I want to be able to save my delivery information.
 13. As a register User I want to be able to receive email confirmation after check out.
@@ -112,10 +112,17 @@ Link to Wireframes folder: [Wireframes](docs/wireframes.pdf)
 15. As an unregister / register  I want to be able to view a specific category of products.
 16. As an unregister / register I want to be able to view products added to shopping cart.
 17. As an unregister / register I want to be able to view confirmation / error messages during my activity within the website.
-18. As admin I want to be able to add a product.
-19. As admin I want to be able to edit a product.
-20. As admin I want to be able to update a product.
-21. As admin I want to be able to delete a product.
+18. As Admin I want to be able to add a product.
+19. As Admin I want to be able to edit a product.
+20. As Admin I want to be able to navigate to the Admin panel to view the data saved in the database
+21. As Admin I want to be able to delete a product.
+22. As Admin I want to be able to delete a review.
+23. As Admin I want to be able to delete a wishlist.
+24. As Admin I want to be able to delete a user.
+25. As Admin I want to be able to delete an order.
+26. As Admin I want to be able to delete a category.
+
+
 
 ## **_Features_**
 
