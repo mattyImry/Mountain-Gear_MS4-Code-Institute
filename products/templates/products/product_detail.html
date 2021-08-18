@@ -139,8 +139,32 @@
                         {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_product' product.id %}"> Edit</a> /
-                            <a href="{% url 'delete_product' product.id %}">Delete</a>
+                            <a href="#" data-toggle="modal" data-target="#modal-delete-p{{ product.id }}">Delete</a>
                         </small>
+
+                        <!--Modal to confirm deleting product-->
+                        <div class="modal fade" id="modal-delete-p{{ product.id }}" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Confirm delete product</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to delete this product?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button"
+                                            class="btn gear-button rounded text-uppercase" data-dismiss="modal">Cancel</button>
+                                        <a class="btn gear-button rounded text-uppercase"
+                                            href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         {% endif %}
                         <p class="p-description">{{ product.description }}</p>     
                     </div>
@@ -164,11 +188,11 @@
                         {% if review.profile.user == request.user %}
                             <div class="ml-3">
                                 <a href="{% url 'edit_review' review.id product.id %}"> Edit</a> /
-                                <a href="#" data-toggle="modal" data-target="#modal-delete">Delete</a>
+                                <a href="#" data-toggle="modal" data-target="#modal-delete{{review.id}}{{ product.id }}">Delete</a>
                             </div>
 
                             <!--Modal to confirm deleting review-->
-                            <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog"
+                            <div class="modal fade" id="modal-delete{{review.id}}{{ product.id }}" tabindex="-1" role="dialog"
                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -182,7 +206,7 @@
                                             <p>Are you sure you want to delete this review?</p>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn gear-button rounded text-uppercase">Cancel</button>
+                                            <button type="button" class="btn gear-button rounded text-uppercase" data-dismiss="modal">Cancel</button>
                                             <a class="btn gear-button rounded text-uppercase"
                                                 href="{% url 'delete_review' review.id product.id %}">Delete</a>
                                         </div>

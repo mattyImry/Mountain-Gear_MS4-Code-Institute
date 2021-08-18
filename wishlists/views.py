@@ -43,9 +43,5 @@ def delete_product_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.filter(products=product, user=user).delete()
-
-    print(product.id)
-    print(user)
-    print(wishlist)
     messages.success(request, f'Product {product.name} removed form wishlist!')
     return redirect(reverse('view_wishlist'))
