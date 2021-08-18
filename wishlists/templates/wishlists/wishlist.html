@@ -56,10 +56,33 @@
                             <span class="text-uppercase">Add to cart
                             </span>
                         </a>
-                    
-                        <a href="{% url 'delete_product_wishlist' wishitem.products.id  %}" class="mt-2">Remove</a>
+                        <a href="#" class="mt-2" data-toggle="modal" data-target="#modal-delete-w">Remove</a>
                     
                     </div>
+
+
+                    <!--Modal to confirm deleting from wishlist-->
+                    <div class="modal fade" id="modal-delete-w" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to remove this product from the wishlist?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn gear-button rounded text-uppercase">Cancel</button>
+                                <a class="btn gear-button rounded text-uppercase"
+                                    href="{% url 'delete_product_wishlist' wishitem.products.id  %}">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             {% endfor %}
         </div>

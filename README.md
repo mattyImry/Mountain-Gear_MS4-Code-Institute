@@ -217,10 +217,8 @@ Now you can start deploying to [Heroku](https://www.heroku.com/).
 
 ### **_Heroku deployment_**  
 
-To deploy to heroku you will need to set up your "Postgress". 
+To deploy to heroku you will need to set up your "Postgress" and you will need a storage to store your staic files and media file. In this project I have used [AWS services](https://aws.amazon.com/).
 
-1. Creating a new app.
-2. In resources select add-on and choose Heroku Postgrees
 
 1. Create a requirement.txt file that is need to Heroku to confirm dependences. In your terminal please type:  
 `pip3 freeze --local > requirements.txt`
@@ -250,7 +248,7 @@ To deploy to heroku you will need to set up your "Postgress".
 
 ## **_Credits_**
 
-* This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institute. On top of codes and functions you can see the reference for the code.
+* This project is inspired by [GoOutdoors](https://www.gooutdoors.co.uk/). The code is taken by following the Boutique Ado project from Code Institute. On top of codes and functions you can see the references for the code.
 * To adjust the font size, for mobile view, of the icons in the navbar-mobile, the toggle-button and the increase/decrease buttons in product detail page, the code come from Boutique Ado.
 * To use the widget from Django for the contact form I looked at this post from [StackOverflow.com](https://stackoverflow.com/questions/4101258/how-do-i-add-a-placeholder-on-a-charfield-in-django).
 * To start the reviews app I have looked at [Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1622458371215100) 
