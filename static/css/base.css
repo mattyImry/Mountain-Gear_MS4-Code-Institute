@@ -485,8 +485,8 @@ select option[value=""] {
         margin-bottom: 4px;
     }
 
-    .order-history {
-        margin-bottom: 50px;
+    .col-history {
+        margin-bottom: 70px;
     }
 
     .increment-qty, .decrement-qty {
