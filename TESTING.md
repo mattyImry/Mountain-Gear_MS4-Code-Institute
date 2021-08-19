@@ -23,7 +23,7 @@ The project has been tested in mobile view in the following devices without any 
 ### **_Automated testing_**
 
 The HTML files has been validating using [W3 markup validator](https://validator.w3.org/).
-No errors but I have a warning for the JavaScript attribute type marked as unnecessary which it is present in the majority of the pages.
+No errors but I have a warning for the JavaScript attribute type marked as unnecessary which it is present in the pages where JavaSript has been added at the bottom of HTML file.
 
 To validate the CSS I have used [W3 CSS validator](https://jigsaw.w3.org/css-validator/).
 No error or warnings detected.
@@ -34,7 +34,9 @@ No error detected.
 
 To validate Python code I have used [Pep8 online](http://pep8online.com/checkresult) and the built in Pep8 in Gitpod. The only errors left in the Python pages are only present in pages pre created by Django, migrations file and settings.py file.
 
-* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools). DO NOT FORGET LIGHTHOUSE AFTER DEPLOY.
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools). Below are the screen shots for the Lighthouse testing for mobile and desktop views
+[desktop](docs/light_house_desktop.jpg)
+[mobile](docs/light_house_mobile.jpg)
 
 ### **_Manual testing_**
 

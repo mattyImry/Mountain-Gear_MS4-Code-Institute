@@ -480,8 +480,13 @@ select option[value=""] {
     .col-success {
         margin-bottom: 0px;
     }
+
     .btn {
         margin-bottom: 4px;
+    }
+
+    .order-history {
+        margin-bottom: 50px;
     }
 
     .increment-qty, .decrement-qty {

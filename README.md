@@ -1,6 +1,6 @@
 Full Stack Frameworks with Django Milestone Project 4 - Code Institute
 
-{PIC OF IAM RESPONSIVE}
+![Screenshotproject](docs/mountain_gear_responsive.jpg)
 
 # **_Mountain Gear_**
 
