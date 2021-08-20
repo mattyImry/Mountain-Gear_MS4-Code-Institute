@@ -25,4 +25,4 @@ class WishlistItem(models.Model):
                                 related_name='product')
 
     def __str__(self):
-        return f'Wishlist Item ({self.wishlist.user}) ({self.product})'
+        return f'Wishlist Item ({self.wishlist}) ({self.product})'

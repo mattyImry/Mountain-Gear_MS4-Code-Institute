@@ -10,12 +10,10 @@ def view_wishlist(request):
     View to display wishlist
     """
     user = get_object_or_404(UserProfile, user=request.user)
-    # wishlist, created = Wishlist.objects.get_or_create(user=user)
-    # wishlist = user.wishlist.all(user=user)
-    wishlist = get_object_or_404(Wishlist, user=user)
+    wishlist = user.wishlist.all()
 
     if wishlist:
-        wishlist_items = WishlistItem.objects.filter(wishlist=wishlist)
+        wishlist_items = WishlistItem.objects.filter(wishlist__in=wishlist)
 
     else:
         wishlist_items = []
@@ -34,9 +32,11 @@ def add_to_wishlist(request, product_id):
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
-    wishlist, wishlist_status = Wishlist.objects.get_or_create(user=user)
-    wishlist_item = WishlistItem.objects.get_or_create(wishlist=wishlist,
-                                                       product=product)
+
+    wishlist = Wishlist.objects.create(user=user)
+
+    wishlist_item = WishlistItem.objects.create(wishlist=wishlist, product=product)
+    wishlist_item.save()
 
     messages.success(
         request, f'Added {product.name} to your wishlist')
@@ -52,8 +52,8 @@ def delete_product_wishlist(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
-    wishlist = get_object_or_404(Wishlist, user=user)
+    wishlist = wishlist = user.wishlist.all()
     wishlist_item = WishlistItem.objects.filter(product=product,
-                                                wishlist=wishlist).delete()
+                                                wishlist__in=wishlist).delete()
     messages.success(request, f'Product {product.name} removed form wishlist!')
     return redirect(reverse('view_wishlist'))

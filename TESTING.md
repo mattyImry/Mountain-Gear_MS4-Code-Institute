@@ -23,7 +23,7 @@ The project has been tested in mobile view in the following devices without any 
 ### **_Automated testing_**
 
 The HTML files has been validating using [W3 markup validator](https://validator.w3.org/).
-No errors but I have a warning for the JavaScript attribute type marked as unnecessary which it is present in the pages where JavaSript has been added at the bottom of HTML file.
+No error or warnings detected.
 
 To validate the CSS I have used [W3 CSS validator](https://jigsaw.w3.org/css-validator/).
 No error or warnings detected.

@@ -16,11 +16,11 @@ I have designed this website to allow the User to be able to check and buy climb
 #### **_Data schema_**
 
 The database for this project is Sql. Sql works with tables instead of documents like in MongoDb databases.
-* For the products of the website I have created 2 tables. One containing the categories of products and the second table containing the products. The products have all the related fields that describe the product. Every product in the product's table has a Primary Key and also a Category id which refer to the Primary key of each category in the categories table.
-* I have created a Order table to save orders and I have created a OrderLine Item table to save the products in the orders. To save the User's orders the user field has a foreign key to connect to the user which place the order. To save the products, in the order table, there is a user field as foreign key to connect to the user and also the product field uses a foreign key to connect with the product.
+* For the products of the website I have created 2 tables. One containing the categories of products and the second table containing the products. 
+* I have created a Order table to save orders and I have created a OrderLine Item table to save the products in the orders. 
 * For the User I have created a table to store information of the user with all the related field necessary for delivery.
-* To save the reviews related to one product I have created a table with a User field with foreign key to connect to the user that created the review and also the products has a foreign key to connect to the product reviewed.
-* ADD DATA chema 
+* To save the reviews related to one product I have created a table with a User field to connect to the user that created the review and also the products reviewed.
+* For the wishlist I have created 2 tables one for the wishlist containing the user and the second one for the wishlist item containing the wishlist and the product needed to create the list of products.
 
 ### **_Scope_**
 
@@ -183,7 +183,6 @@ For the testing section please refer to TESTING.md file.
 * When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show up in the info message box. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.
 
 * At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinitely without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeeded and also the order is saved in the admin panel. After fixing the issue with gitpod this problem has disappeared. Now the postcode area input accepts only 5 numbers.
-
 
 
 ## **_Deployment_**
