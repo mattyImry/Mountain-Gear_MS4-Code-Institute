@@ -34,8 +34,12 @@ No error detected.
 
 To validate Python code I have used [Pep8 online](http://pep8online.com/checkresult) and the built in Pep8 in Gitpod. The only errors left in the Python pages are only present in pages pre created by Django, migrations file and settings.py file.
 
-* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools). Below are the screen shots for the Lighthouse testing for mobile and desktop views
+I have also used [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools) to test this project.
+
+Below are the screen shots for the Lighthouse testing for mobile and desktop views.  
+
 [desktop](docs/light_house_desktop.jpg)
+
 [mobile](docs/light_house_mobile.jpg)
 
 ### **_Manual testing_**

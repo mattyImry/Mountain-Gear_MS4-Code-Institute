@@ -20,7 +20,7 @@ The database for this project is Sql. Sql works with tables instead of documents
 * I have created a Order table to save orders and I have created a OrderLine Item table to save the products in the orders. To save the User's orders the user field has a foreign key to connect to the user which place the order. To save the products, in the order table, there is a user field as foreign key to connect to the user and also the product field uses a foreign key to connect with the product.
 * For the User I have created a table to store information of the user with all the related field necessary for delivery.
 * To save the reviews related to one product I have created a table with a User field with foreign key to connect to the user that created the review and also the products has a foreign key to connect to the product reviewed.
-* To read about the schema for the wishlist model please refer to bug and fixes section.
+* ADD DATA chema 
 
 ### **_Scope_**
 
@@ -178,13 +178,6 @@ For the testing section please refer to TESTING.md file.
 
 ## **_Bugs and fixes_**
 
-### **_Wishlist app_**
-
-I run in many issues when writing the wishlist app. The main issue was the functionality to add to the wishlist a product. After debugging the `add_to_wishlist` view with tutoring a few times came clear that the issue was the way the model is designed. My itention was to create a wishlist and then via the `WishlistItem` part of the model to add this products to the wishlist. At the moment what is happening is that every time a user adds a product to the wishlist a new wishlist is created with one product attached. This is not what my initial idea was. Because I found it hard to implement this functionality I have decided to keep the wishlist app as it is to give the User a viable product. I understand that this is not the best route to take but I will implement the functionality as I will try to implement a many to many relationship in the model for the product field. I have spoken with my mentor about this issue and He was happy with my choice to keep a product functional for the user and that the issue is reported in the readme.
-
-The data schema for the wishlist at the moment take the user as a foreign key and one product foreign key and create one wishlist related to the user and the product added.
-
-### **_Other bags and fixes_**
 * Due to some of my products having numbers and other product having sizes and other product having no sizing and no numbers, I had a problem with my `cart.view.py` where I could not work out the right looping methods to adjust the bags. After trying a few different methods and with the help of tutoring I have manage to create all the functions with consistent "if statements".
 
 * When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show up in the info message box. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.

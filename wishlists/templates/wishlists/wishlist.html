@@ -23,26 +23,26 @@
         <div class="row">
 
             <!--Displaying products in wishlist-->
-            {% for wishitem in wishlist %}
+            {% for wishitem in wishlist_items %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-wishlist">
                     <div class="shadow rounded card h-100">
                         
-                        {% if wishitem.products.image %}  
-                            <img class="card-img-top img-fluid" src="{{ wishitem.products.image.url }}" alt="{{ wishitem.wishlist_products.name }}">
+                        {% if wishitem.product.image %}  
+                            <img class="card-img-top img-fluid" src="{{ wishitem.product.image.url }}" alt="{{ wishitem.product.name }}">
                         {% else %}
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ wishitem.products.name }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ wishitem.product.name }}">
                         {% endif %}
 
                         <div class="card-body pb-0 pt-0">
                             
-                            <p >{{ wishitem.products.name }}</p>
+                            <p >{{ wishitem.product.name }}</p>
                         </div>
                         <div class="card-footer bg-white border-0 text-left pt-0">
                             <div class="row">
                                 <div class="col">
-                                    <p class=" text-left price-tag mb-0">£{{ wishitem.products.price }}</p>
-                                    {% if wishitem.products.rating %}
-                                        <small><i class="fas fa-star mr-1"></i>{{ wishitem.products.rating }} / 5</small>
+                                    <p class=" text-left price-tag mb-0">£{{ wishitem.product.price }}</p>
+                                    {% if wishitem.product.rating %}
+                                        <small><i class="fas fa-star mr-1"></i>{{ wishitem.product.rating }} / 5</small>
                                     {% else %}
                                         <small>No Rating</small>
                                     {% endif %}
@@ -52,17 +52,17 @@
                         
                     </div>
                     <div>
-                        <a href="{% url 'product_detail' wishitem.products.id %}" class="btn gear-button rounded text-uppercase mt-3">
+                        <a href="{% url 'product_detail' wishitem.product.id %}" class="btn gear-button rounded text-uppercase mt-3">
                             <span class="text-uppercase">Add to cart
                             </span>
                         </a>
-                        <a href="#" class="mt-2" data-toggle="modal" data-target="#modal-delete{{wishitem.products.id}}">Remove</a>
+                        <a href="#" class="mt-2" data-toggle="modal" data-target="#modal-delete{{wishitem.product.id}}">Remove</a>
                     
                     </div>
 
 
                     <!--Modal to confirm deleting from wishlist-->
-                    <div class="modal fade" id="modal-delete{{wishitem.products.id}}" tabindex="-1" role="dialog"
+                    <div class="modal fade" id="modal-delete{{wishitem.product.id}}" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -78,7 +78,7 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn gear-button rounded text-uppercase" data-dismiss="modal">Cancel</button>
                                 <a class="btn gear-button rounded text-uppercase"
-                                    href="{% url 'delete_product_wishlist' wishitem.products.id  %}">Remove</a>
+                                    href="{% url 'delete_product_wishlist' wishitem.product.id  %}">Remove</a>
                             </div>
                         </div>
                     </div>

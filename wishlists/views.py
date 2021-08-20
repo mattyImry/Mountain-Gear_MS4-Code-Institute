@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
-from .models import UserProfile, Product, Wishlist
+from .models import UserProfile, Product, Wishlist, WishlistItem
 from django.contrib.auth.decorators import login_required
 
 
@@ -10,11 +10,17 @@ def view_wishlist(request):
     View to display wishlist
     """
     user = get_object_or_404(UserProfile, user=request.user)
-    wishlist = Wishlist.objects.filter(user=user)
+    wishlist, created = Wishlist.objects.get_or_create(user=user)
+
+    if wishlist:
+        wishlist_items = WishlistItem.objects.filter(wishlist=wishlist)
+
+    else:
+        wishlist_items = []
+
     template = 'wishlists/wishlist.html'
     context = {
-
-        'wishlist': wishlist,
+        'wishlist_items': wishlist_items,
     }
     return render(request, template, context)
 
@@ -26,7 +32,9 @@ def add_to_wishlist(request, product_id):
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
-    products = Wishlist.objects.get_or_create(products=product, user=user)
+    wishlist, wishlist_status = Wishlist.objects.get_or_create(user=user)
+    wishlist_item = WishlistItem.objects.get_or_create(wishlist=wishlist,
+                                                       product=product)
 
     messages.success(
         request, f'Added {product.name} to your wishlist')
@@ -42,6 +50,8 @@ def delete_product_wishlist(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
-    wishlist = Wishlist.objects.filter(products=product, user=user).delete()
+    wishlist = get_object_or_404(Wishlist, user=user)
+    wishlist_item = WishlistItem.objects.filter(product=product,
+                                                wishlist=wishlist).delete()
     messages.success(request, f'Product {product.name} removed form wishlist!')
     return redirect(reverse('view_wishlist'))

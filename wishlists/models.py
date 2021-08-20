@@ -6,15 +6,23 @@ from products.models import Product
 class Wishlist(models.Model):
     """
     Model to create a wishlist and wishlist item
-    For credit please refer to readme
-    for Slack post
     """
     user = models.ForeignKey(UserProfile, null=False, blank=False,
                              on_delete=models.CASCADE, related_name='wishlist')
 
-    products = models.ForeignKey(Product, null=False, blank=False,
+    def __str__(self):
+        return f'wishlist ({self.user})'
+
+
+class WishlistItem(models.Model):
+
+    wishlist = models.ForeignKey(Wishlist, null=False, blank=False,
                                  on_delete=models.CASCADE,
-                                 related_name='product', default=1)
+                                 related_name='wishlist_item')
+
+    product = models.ForeignKey(Product, null=False, blank=False,
+                                on_delete=models.CASCADE,
+                                related_name='product')
 
     def __str__(self):
-        return f'Wishlist ({self.user}) ({self.products})'
+        return f'Wishlist Item ({self.wishlist.user}) ({self.product})'
