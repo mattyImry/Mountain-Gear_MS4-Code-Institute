@@ -10,7 +10,9 @@ def view_wishlist(request):
     View to display wishlist
     """
     user = get_object_or_404(UserProfile, user=request.user)
-    wishlist, created = Wishlist.objects.get_or_create(user=user)
+    # wishlist, created = Wishlist.objects.get_or_create(user=user)
+    # wishlist = user.wishlist.all(user=user)
+    wishlist = get_object_or_404(Wishlist, user=user)
 
     if wishlist:
         wishlist_items = WishlistItem.objects.filter(wishlist=wishlist)
