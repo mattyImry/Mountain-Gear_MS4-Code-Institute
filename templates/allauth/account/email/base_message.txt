@@ -1,4 +1,4 @@
-{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name %}Hello from Mountain Gear!{% endblocktrans %}
+{% load i18n %}{% autoescape off %}Hello from Mountain Gear!
 
 {% block content %}{% endblock %}
 
