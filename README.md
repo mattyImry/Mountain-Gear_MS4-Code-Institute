@@ -233,16 +233,16 @@ To deploy to heroku you will need to set up your "Postgress" and you will need a
  Below Deployment method find you repository name listed and select it.  
 6. Still in Heroku go to "Settings" and click "Reveal Config Vars"
 7. In this section you need to fill in the inputs field with the environment variables.
-    AWS_ACCESS_KEY_ID
-    AWS_SECRET_ACCESS_KEY
-    DATABASE_URL
-    EMAIL_HOST_PASSWORD
-    EMAIL_HOST_USER
-    SECRET_KEY
-    STRIPE_PUBLIC_KEY
-    STRIPE_SECRET_KEY
-    STRIPE_WH_SECRET
-    USE_AWS
+    AWS_ACCESS_KEY_ID  
+    AWS_SECRET_ACCESS_KEY  
+    DATABASE_URL  
+    EMAIL_HOST_PASSWORD  
+    EMAIL_HOST_USER  
+    SECRET_KEY  
+    STRIPE_PUBLIC_KEY  
+    STRIPE_SECRET_KEY  
+    STRIPE_WH_SECRET  
+    USE_AWS  
 8. Then enable "Automatic deploys".
 9. In "Manual Deployment" click "Deploy Branch".
 10. You should get the message "Your app is succesfully deployed".

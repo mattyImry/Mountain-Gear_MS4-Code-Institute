@@ -32,7 +32,7 @@ To validate JavaScript files I have used [Jshint](https://jshint.com/).
 No error detected.
 
 
-To validate Python code I have used [Pep8 online](http://pep8online.com/checkresult) and the built in Flake8 in Gitpod. The only errors left in the Python pages are only present in pages pre created by Django, migrations file and settings.py file.
+To validate Python code I have used [Pep8 online](http://pep8online.com/) and the built in Flake8 in Gitpod. The only errors left in the Python pages are only present in pages pre created by Django, migrations file and settings.py file.
 
 I have also used [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools) to test this project.
 
@@ -260,3 +260,4 @@ user story | action taken | expected result | functional
 24 | As Admin by going to the admin panel opening the "User" section and selecting a user then delete user | user deleted from  database | Yes
 25 | As Admin by going to the admin panel opening the "Order" section and selecting an Order then delete Order | Order deleted from website and database | Yes
 26 | As Admin by going to the admin panel opening the "Category" section and selecting a Category then delete Category | Category deleted from website and database | Yes
+ 
