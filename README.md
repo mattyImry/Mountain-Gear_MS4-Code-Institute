@@ -2,6 +2,8 @@ Full Stack Frameworks with Django Milestone Project 4 - Code Institute
 
 ![Screenshotproject](docs/mountain_gear_responsive.jpg)
 
+Live Link : https://mountain-gear-ms4.herokuapp.com/ 
+
 # **_Mountain Gear_**
 
 This project is my fourth Milestone Project for the [Code Institute](https://codeinstitute.net/) Full Stack Software Developer Diploma. This project is designed to demonstrate my capabilities to create a Full Stack web application with the use of [Python3](https://www.python.org/download/releases/3.0/) and 
@@ -20,7 +22,7 @@ The database for this project is Sql. Sql works with tables instead of documents
 * I have created a Order table to save orders and I have created a OrderLine Item table to save the products in the orders. 
 * For the User I have created a table to store information of the user with all the related field necessary for delivery.
 * To save the reviews related to one product I have created a table with a User field to connect to the user that created the review and also the products reviewed.
-* For the wishlist I have created 2 tables one for the wishlist containing the user and the second one for the wishlist item containing the wishlist and the product needed to create the list of products.
+* For the wishlist I have created 2 tables one for the wishlist containing the user and the second one for the wishlist item containing the wishlist and the product needed to create the wishlist.
 
 ### **_Scope_**
 
@@ -36,7 +38,6 @@ Features that I want to implement are:
 * Ability for the registered User to buy climbing products.
 * Ability for the registered User to save items in the wishlist.
 * Ability for the registered User to delete items from the wishlist.
-* Ability for the registered User to delete the wishlist.
 * Ability for the registered User to view the order history.
 * Ability for the registered User to login / logout from the website.
 * Ability for any User to search products.
@@ -128,8 +129,8 @@ Link to Wireframes folder: [Wireframes](docs/wireframes.pdf)
 
 ### **_Existing Features_**
 
-* The navbar contains a logo on top right hand corner to redirect to the landing page. There is a search box to search products, the cart total always visible and the account menu. If the user is not logged the account menu will open a window with 2 links: Register and login. If the user is logged the account submenu will show 2 links: Profile and Logout.
-If the admin is logged the account submenu will show 3 links: Profile, Logout and Products menu.  
+* The navbar contains a logo on top left hand corner to redirect to the landing page. There is a search box to search products, the cart total always visible and the account menu. If the user is not logged the account menu will open a window with 2 links: Register and login. If the user is logged the account submenu will show 3 links: Profile. wishlist and Logout.
+If the admin is logged the account submenu will show 4 links: Profile, Logout. Wishlist and Products menu.  
 * The footer will show the contact us page where any user can contact the website admin/owner.
 * The website is visible in all screen sizes.
 * The unregistered User can register an account via the "Register" page.
@@ -182,7 +183,9 @@ For the testing section please refer to TESTING.md file.
 
 * When updating products via cart I had an issue with the product that are shoes which has a number. When adding the product to the cart everything is correct but If I update the shoes in the cart the value for number doesn't show and also N/A doesn't show up in the info message box. At the end with tutoring we discovered that the issue was in the cart.html specifically an issue with the variable used.
 
-* At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinitely without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeeded and also the order is saved in the admin panel. After fixing the issue with gitpod this problem has disappeared. Now the postcode area input accepts only 5 numbers.
+* At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinitely without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeeded and also the order is saved in the admin panel. After fixing the issue with Gitpod which happend when Gitpod migrated to VS code this problem has disappeared. Now the postcode area input accepts only 5 numbers.
+
+* When looking at the admin panel in the wishlist section, at the moment, whenever i add a product to a wishlist a new wishlist with the user name is created. In the future when I will have more time I will try to implement that one wishlist per user is created with the items attached to it.
 
 
 ## **_Deployment_**
@@ -216,7 +219,7 @@ Now you can start deploying to [Heroku](https://www.heroku.com/).
 
 ### **_Heroku deployment_**  
 
-To deploy to heroku you will need to set up your "Postgress" and you will need a storage to store your staic files and media file. In this project I have used [AWS services](https://aws.amazon.com/).
+To deploy to heroku you will need to set up your "Postgress" and you will need a storage to store your static files and media file. In this project I have used [AWS services](https://aws.amazon.com/).
 
 
 1. Create a requirement.txt file that is need to Heroku to confirm dependences. In your terminal please type:  

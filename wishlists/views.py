@@ -35,7 +35,8 @@ def add_to_wishlist(request, product_id):
 
     wishlist = Wishlist.objects.create(user=user)
 
-    wishlist_item = WishlistItem.objects.create(wishlist=wishlist, product=product)
+    wishlist_item = WishlistItem.objects.create(wishlist=wishlist,
+                                                product=product)
     wishlist_item.save()
 
     messages.success(
