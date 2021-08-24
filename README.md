@@ -185,7 +185,7 @@ For the testing section please refer to TESTING.md file.
 
 * At checkout Stripe payment where the card details need to be entered, the postcode area let input a number indefinitely without stopping after the 5th digit. I cannot find a solution to this but it does not cause any issue for the payment. The event in the Stripe dashboard is flagged as succeeded and also the order is saved in the admin panel. After fixing the issue with Gitpod which happend when Gitpod migrated to VS code this problem has disappeared. Now the postcode area input accepts only 5 numbers.
 
-* When looking at the admin panel in the wishlist section, at the moment, whenever i add a product to a wishlist a new wishlist with the user name is created. In the future when I will have more time I will try to implement that one wishlist per user is created with the items attached to it.
+* When looking at the admin panel in the wishlist section, at the moment, whenever i add a product to a wishlist a new wishlist with the user name is created. In the future when I will have more time I want to implement that one wishlist per user is created with the items attached to it.
 
 
 ## **_Deployment_**

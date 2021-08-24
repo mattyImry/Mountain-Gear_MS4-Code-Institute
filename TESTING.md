@@ -111,7 +111,7 @@ By clicking the plus or minus button in the quantity box | Number is changing re
 By adjusting the quantity box and then clicking "Add to cart" | Product added with the right quantity to cart | Yes
 Clicking "Add to cart" | The selected product is added to the cart and message confirmation displayed with pricing | Yes
 Clicking "go to checkout" button in the message confirmation box | redirect to the checkout page | Yes
-By clicking "Keep shopping " button | Redirect to the product page | Yes
+By clicking "Keep shopping " button | Redirect to the products page | Yes
 Clicking "Add to wishlist" | The selected product is added to the wishlist and message confirmation displayed | Yes
 Clicking on the "category" link | Redirect to the products' category displaying all product in that category | Yes
 Clicking on "edit" product link | Redirect to the edit product page to related product selected, message alert displayed | Yes
@@ -126,14 +126,14 @@ action taken | expected result | functional
 ------------ | --------------- | --------- |
 By clicking the "Add review" button without writing in the text box | Message "Please fill in this field" appear | Yes
 By clicking the "Cancel" button | Redirect to product detail page | Yes
-Filling the text box and click "Add Review" button |Redirected to product detail page, review added to product, added to database and message confirmation displayed| Yes
+Filling the text box and click "Add Review" button | Redirected to product detail page, review added to product, added to database and message confirmation displayed| Yes
 
 
 #### **_Edit review page_**
 action taken | expected result | functional 
 ------------ | --------------- | --------- |
-Clicking on "Edit" review link if review is present| Redirect to edit review page | Yes
-Modifying the text then click "Edit review" button | Edit review , edit in database message confirmation displayed| Yes
+Clicking on "Edit" review link if review is present | Redirect to edit review page | Yes
+Modifying the text then click "Edit review" button | Edit review , edit review saved in database message confirmation displayed | Yes
 By clicking the "Cancel" button | Redirect to product detail page | Yes
 
 
@@ -144,7 +144,7 @@ Clicking category dropdown | Showing all categories | Yes
 Clicking has sizes dropdown | Showing Unknown, yes, no | Yes
 Clicking has numbers dropdown | Showing Unknown, yes, no | Yes
 By not filling the star marked field | Message "Please fill in this field" appear | Yes
-Clicking "Select Image" button | Opens a window to select picture from hard disk | Yes
+Clicking "Select Image" button | Opens a window to select picture from local hard disk | Yes
 By filling the form completely and clicking " Add product" button | Form submitted , message confirmation displayed, product added to database | Yes
 Clicking "Cancel" button | Redirect to products page | Yes
 
@@ -154,7 +154,7 @@ action taken | expected result | functional
 ------------ | --------------- | --------- |
 Modifying the fields, filling the starred fields  clicking "edit product" button | Product modified and message confirmation displayed | Yes
 Selecting the remove box and clicking "edit product" button | Picture successfully removed | Yes
-Clicking "Select Image" button | Opens a windows to select picture from harddisk | Yes
+Clicking "Select Image" button | Opens a windows to select picture from local hard disk | Yes
 If the starred fields are not populated | Message "Please fill in this field" appear on field not populated, form cannot be submitted | Yes
 Clicking "Cancel" button | Redirect to products page | Yes
 
@@ -211,7 +211,7 @@ action taken | expected result | functional
 ------------ | --------------- | --------- |
 Not filling the fields in the form marked with the * and pressing "Complete Order" button | Message "Please fill in this field" appear on field not populated | Yes
 Clicking the dropdown menu "Country" | Display all countries | Yes
-By filling the mandatory field and using the Stripe card number for testing "4242 4242 4242 4242  04 / 24  242  42424" then click "Complete Order" | Redirect to Checkout success page, Success message displayed, confirmation email received ( Also in terminal) with correct order number, order details, user's details and email address, Stripe Webhooks Succeeded for "payment_intent.created", "payment_intent.Succeeded", "Charge.Succeeded", Webhooks received in terminal 200 message, Stripe Events dashboard " new payment created" and "The payment Succeeded" | Yes
+By filling the mandatory field and using the Stripe card number for testing "4242 4242 4242 4242  04 / 24  242  42424" then click "Complete Order" | Redirect to Checkout success page, Success message displayed, confirmation email received ( Also in terminal) with correct order number, order details, user's details and email address, Stripe Webhooks Succeeded for "payment_intent.created", "payment_intent.Succeeded", "Charge.Succeeded", Webhooks received in terminal 200 message, Stripe Events dashboard " new payment created" and "The payment Succeeded" shown | Yes
 
 #### **_Checkout success page_**
 action taken | expected result | functional 
