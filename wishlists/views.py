@@ -53,7 +53,7 @@ def delete_product_wishlist(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     user = get_object_or_404(UserProfile, user=request.user)
-    wishlist = wishlist = user.wishlist.all()
+    wishlist = user.wishlist.all()
     wishlist_item = WishlistItem.objects.filter(product=product,
                                                 wishlist__in=wishlist).delete()
     messages.success(request, f'Product {product.name} removed form wishlist!')
